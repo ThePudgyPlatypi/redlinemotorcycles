@@ -1,0 +1,18 @@
+{
+    "logo" : "images/Logo-official.png",
+    "links" : [
+        {
+            "name" : "Services",
+            "url" : "services"
+        }, 
+        {
+            "name" : "Team",
+            "url" : "team"
+        },
+        {
+            "name" : "Blog",
+            "url" : "blog"
+        }
+    ],
+    "class" : "stupid data"
+}
