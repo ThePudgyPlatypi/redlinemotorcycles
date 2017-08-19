@@ -757,7 +757,7 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/vmax.png", id:"vmax"}
+		{src:"../../images/vmax.png", id:"vmax"}
 	],
 	preloads: []
 };

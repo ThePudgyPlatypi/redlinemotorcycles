@@ -1,12 +1,12 @@
 <div class="nav">
     <div class="redBar">
-        <div class="navCircle">
-            <img class="navLogo" ng-src="{{ info.logo }}">
-        </div>
-        <ul ng-repeat="link in info.links">
-            <li>
-                <a ng-href="/{{ link.url }}">{{ link.name }}</a>
+        <ul>
+            <li ng-repeat="link in info.links">
+                <a class="navLink" ng-href="#!{{ link.url }}">{{ link.name }}</a>
             </li>
         </ul>
+    </div>
+    <div class="navCircle centerFlex">
+        <img class="navLogo" ng-src="{{ info.logo }}">
     </div>
 </div>

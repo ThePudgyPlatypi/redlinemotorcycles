@@ -14,11 +14,11 @@
 <title>Service_animation_final</title>
 <!-- write your code here -->
 <style>
-  #animation_container {
+  #animation_container, #_preload_div_ {
 	position:absolute;
 	margin:auto;
 	left:0;right:0;
-	top:0;bottom:0;
+	top:20%;bottom:0;
   }
 </style>
 <script src="js/vendor/createjs.min.js"></script>
@@ -50,6 +50,9 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	canvas.style.display = 'block';
 	exportRoot = new lib.Service_animation_final();
 	stage = new lib.Stage(canvas);
 	stage.addChild(exportRoot);	
@@ -84,14 +87,14 @@ function handleComplete(evt,comp) {
 			}			
 			canvas.width = w*pRatio*sRatio;			
 			canvas.height = h*pRatio*sRatio;
-			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
-			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			canvas.style.width = anim_container.style.width = dom_overlay_container.style.width = preloaderDiv.style.width = w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = preloaderDiv.style.height = h*sRatio+'px';
 			stage.scaleX = pRatio*sRatio;			
 			stage.scaleY = pRatio*sRatio;			
 			lastW = iw; lastH = ih; lastS = sRatio;		
 		}
 	}
-	makeResponsive(true,'both',false,1);	
+	makeResponsive(true,'both',true,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
@@ -100,9 +103,10 @@ function handleComplete(evt,comp) {
 </head>
 <body onload="init();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:1000px; height:600px">
-		<canvas id="canvas" width="1000" height="600" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
+		<canvas id="canvas" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 0);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:600px; position: absolute; left: 0px; top: 0; display: none;">
 		</div>
 	</div>
+    <div id='_preload_div_' style='display: inline-block; height:600px; width: 1000px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="images/_preloader.gif" style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>

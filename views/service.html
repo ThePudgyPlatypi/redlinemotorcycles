@@ -1,1 +1,41 @@
-<p>this is the service page</p>
+<div ng-controller="ServiceController">
+    <div class="row expanded">
+        <div class="columns large-12 small-12 fullHeaderContainer">
+            <div class="fullHeaderImgContainer">
+                <img class="fullHeaderImg cover" ng-src="{{ serviceData.serviceHeaderBG }}" />
+            </div>
+            <div class="row class expanded fullHeaderImgOverlayContainer">
+                <div class="row expanded serviceHeader centerFlex">
+                    <div class="serviceGraphicContainer columns large-8 small-12">
+                        <p>Select a part on the bike or use the Service Index to view various service information</p>
+                        <iframe scrolling="no" src="../../Service_animation_final.html" class="serviceGraphic"></iframe>
+                    </div>
+                    <div class="serviceTable columns large-4 small-12">
+                        <img class="centerHeaderLogo" ng-src="{{ logo }}" />
+                        <div class="transparentContainer">
+                            <div class="transparentBG"></div>
+                            <table class="hover">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Get things that are this</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Do things that are that</td>
+                                    </tr>
+                                    <tr>
+                                        <td>yay! stuff!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

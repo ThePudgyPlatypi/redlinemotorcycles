@@ -1,6 +1,10 @@
 {
-    "logo" : "images/Logo-official.png",
+    "logo" : "images/Logo-official-small.png",
     "links" : [
+        {
+            "name" : "Home",
+            "url" : "/"
+        },
         {
             "name" : "Services",
             "url" : "services"

@@ -1,0 +1,19 @@
+{
+    "logo" : "../../images/Logo-official-small.png",
+    "home" : {
+        "homeHeaderBG" : "../../images/wallpaper.jpg",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
+        "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+    },
+    "service" : {
+        "serviceHeaderBG" : "../../images/garage2.jpg"
+    },
+    "team" : {
+        "teamHeaderBG" : "../../images/garage.jpg",
+        "danImg" : "../../images/NS_0018.png",
+        "patImg" : "../../images/NS_0018.png"
+    },
+    "blog" : {
+        
+    }
+}

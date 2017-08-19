@@ -9,24 +9,28 @@
         <!-- stylesheets -->
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
         
         <!-- vendors -->
         <script src="js/vendor/angular.js"></script>
         <script src="js/vendor/angular-route.min.js"></script>
         <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="js/vendor/jquery-ui.min.js"></script>
+        <script src="js/Service_animation_final.js"></script>
         <script src="js/vendor/createjs.min.js"></script>
         <script src="js/vendor/foundation.min.js"></script>
     </head>
     
     <body ng-app="main">
-        <div class="navContainer" ng-controller="HomeController">
-            <navigation info="links"></navigation>
-        </div>
+        <div class="container row expanded">
+            <div class="navContainer" ng-controller="HomeController">
+                <navigation info="links"></navigation>
+            </div>
             
-        <div class="container">
             <div ng-view></div>
+        
+            <footer-view templateInfo=""></footer-view>
         </div>
-        <footer-view templateInfo=""></footer-view>
         <!-- app -->
         <script src="js/app.js"></script>
         
@@ -47,6 +51,7 @@
         
         <!-- services -->
         <script src="js/services/navigationSer.js"></script>
+        <script src="js/services/informationSer.js"></script>
         
     </body>
 </html>

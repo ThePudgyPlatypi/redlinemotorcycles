@@ -1,1 +1,19 @@
-<p>this is the team page</p>
+<div class="row expanded">
+    <div class="columns large-12 small-12 fullHeaderContainer">
+        <div class="fullHeaderImgContainer">
+<!--            <video class="fullHeaderVid"></video>-->
+            <img class="fullHeaderImg cover" ng-src="{{ teamData.teamHeaderBG }}" />
+        </div>
+        <div class="fullHeaderImgOverlayContainer centerFlex">
+            <div class="ownerLeft"> 
+                <img ng-src="{{ teamData.danImg }}" />
+            </div>
+
+            <img class="centerHeaderLogo" ng-src="{{ logo }}" />
+
+            <div class="ownerRight">
+                <img ng-src="{{ teamData.patImg }}" />
+            </div>
+        </div>
+    </div>
+</div>

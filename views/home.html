@@ -1,3 +1,31 @@
-<full-header headerInfo=""></full-header>
+<div class="row expanded">
+    <div class="columns large-12 small-12 fullHeaderContainer">
+        <div class="fullHeaderImgContainer">
+<!--            <video class="fullHeaderVid"></video>-->
+            <img class="fullHeaderImg cover" ng-src="{{ homeData.homeHeaderBG }}" />
+        </div>
+        <div class="row class expanded fullHeaderImgOverlayContainer">
+            <div class="row expanded centerFlex">
 
-<p>this is the home page</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row expanded aboutRow">
+    <div class="columns small-12 large-12">
+        <div id="animatedLogoContainer">
+            <div id="animatedLogoBubble" class="centerFlex">
+                <img ng-src="{{ logo }}">
+            </div>
+        </div>
+        <p>{{ homeData.about }}</p>
+    </div>
+</div>
+
+<div class="row expanded brandRow">
+    <div class="columns small-12 large-12">
+        <p>{{ homeData.brand }}</p>
+    </div>
+</div>

@@ -1,54 +1,254 @@
 /*General styles*/
+/*---------------------------------------------*/
+*, html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
     height: 100%;
     width: 100%;
+}
+
+iframe {
+    border: 0;
+    overflow: hidden;
 }
 
 .container {
     position: relative;
 }
 
+.cover {
+    object-fit: cover;
+}
+
+/*goes on the parent of what you want to center */
+.centerFlex { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Navigation styling*/
+/*---------------------------------------------*/
 .navContainer {
     position: absolute;
     top: 5%;
     width: 100%;
+    z-index: 1;
 }
 
 .nav {
     width: 100%;
     height: 100px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/*
+.nav:hover {
+    opacity: 1;
+}
+*/
+
+.solidNav {
+    opacity: 1;
 }
 
 .redBar {
     position: relative;
     background-color: #A71E24;
     top: 10%;
-    width: 100px;
+    width: 3%;
     height: 80px;
 }
 
 .navCircle {
     position: absolute;
-    top: -15%;
-    right: -25%;
+    top: 0;
+    left: 1%;
     background-color: #AFADAE;
     border-radius: 100px;
     width: 100px;
     height: 100px;
     text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.navCircleScaleDown {
+    transform: scale(0.9);
+}
+
+.navCircleLeft {
+    left: -1%;
 }
 
 .navLogo {
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: auto;
 }
 
 .redBar ul {
     list-style: none;
-    width: 100%;
+    height: 100%;
 }
 
 .redBar ul li {
     display: inline-block;
+    height: 100%;
+    width: 20%;
+}
+
+.navLink {
+    color: white;
+    font-size: 1.5rem;
+    height: 100%;
+    display: block;
+    padding-top: 20px;
+}
+
+.navLink:hover {
+    color: #AFADAE;
+}
+
+/*Full Page header styling */
+/*---------------------------------------------*/
+
+.fullHeaderContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+.fullHeaderImgContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.fullHeaderImg {
+    width: 100%;
+    height: 100%;
+}
+
+.fullHeaderImgOverlayContainer {
+    position: absolute;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.centerHeaderLogo {
+    
+}
+
+.transparentContainer {
+    position: relative;
+}
+
+.transparentBG {
+    position: absolute;
+}
+
+/*Full page TEAM Page */
+/*---------------------------------------------*/
+.ownerLeft {
+    position: absolute;
+    left: 10%;
+    height: 80vh;
+}
+
+.ownerLeft img {
+    height: 100%;
+}
+
+.ownerRight {
+    position: absolute;
+    right: 10%;
+    height: 80vh;
+}
+
+.ownerRight img {
+    height: 100%;
+}
+
+@media screen and (max-width: 890px) {
+    .ownerLeft {
+        left: -10%;
+        height: 70vh;
+    }
+    .ownerRight {
+        right: -10%;
+        height: 70vh;
+    }
+    
+}
+
+@media screen and (max-width: 460px) {
+    .ownerLeft {
+        left: -25%;
+        height: 60vh;
+    }
+    .ownerRight {
+        right: -25%;
+        height: 60vh;
+    }
+    .centerHeaderLogo {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+/*Full Page Service Header*/
+/*---------------------------------------------*/
+
+.serviceHeader {
+    height: 100vh;
+    position: relative;
+    padding: 0;
+}
+
+.serviceGraphicContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.serviceGraphic {
+    width: 100%;
+    height: 100%;
+}
+
+.serviceTable {
+
+}
+
+/*Half page header styling */
+/*---------------------------------------------*/
+
+
+/*Home styling */
+/*---------------------------------------------*/
+
+.aboutRow {
+    position: relative;
+    background-color: #AFADAE;
+    height: 90vh;
+}
+
+#animatedLogoContainer {
+    position: absolute;
+    border: 1px solid blue;
+    top: -20%;
+    text-align: center;
+}
+
+#animatedLogoBubble {
+    background-color: #AFADAE;
+    border-radius: 100%;
+    
 }
