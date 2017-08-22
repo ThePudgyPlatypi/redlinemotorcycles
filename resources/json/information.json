@@ -3,15 +3,133 @@
     "home" : {
         "homeHeaderBG" : "../../images/wallpaper.jpg",
         "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
-        "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+        "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
+        "brandHeaderBG" : "../../images/Motorcycle-RideBlur.jpg",
+        "bikes" : [
+            {
+                "name" : "Sport Bikes",
+                "image" : "../../images/gsxr.png"
+            },
+            {
+                "name" : "Dirt Bikes",
+                "image" : "../../images/dirtbike.png"
+            },
+            {
+                "name" : "Cruisers",
+                "image" : "../../images/cruiserTouring.png"
+            },
+            {
+                "name" : "ATV's",
+                "image" : "../../images/cbr.png"
+            }
+        ],
+        "brands" : [
+            {
+                "name" : "Aprilia",
+                "logo" : "../../images/Aprilia-vector-logo.png"
+            },
+            {
+                "name" : "Arctic Cat",
+                "logo" : "../../images/Arctic_Cat_logo.png"
+            },
+            {
+                "name" : "BMW Motorcycles",
+                "logo" : "../../images/BMW-motorcycle-logo.png"
+            },
+            {
+                "name" : "Can-Am/Bombardier",
+                "logo" : "../../images/can-am_logo.png"
+            },
+            {
+                "name" : "Honda",
+                "logo" : "../../images/Honda-motorcycle-logo.png"
+            },
+            {
+                "name" : "Husqvarna",
+                "logo" : "../../images/husq-logo.png"
+            },
+            {
+                "name" : "Indian",
+                "logo" : "../../images/Indian-Logo.png"
+            },
+            {
+                "name" : "Kawasaki",
+                "logo" : "../../images/Kawasaki-logo.png"
+            },
+            {
+                "name" : "KTM",
+                "logo" : "../../images/ktm-logo.png"
+            },
+            {
+                "name" : "Kymco",
+                "logo" : "../../images/kymco-logo.png"
+            },
+            {
+                "name" : "Harley Davidson",
+                "logo" : "../../images/logo-harley-davidson.png"
+            },
+            {
+                "name" : "Yamaha",
+                "logo" : "../../images/Logo-Yamaha.png"
+            },
+            {
+                "name" : "Polaris",
+                "logo" : "../../images/Polaris-Logo.png"
+            },
+            {
+                "name" : "Suzuki",
+                "logo" : "../../images/suzuki-transparent.png"
+            },
+            {
+                "name" : "Tirumph",
+                "logo" : "../../images/Triumph-Logo.png"
+                
+            },
+            {
+                "name" : "Victory",
+                "logo" : "../../images/Victory-logo.png"
+            }
+        ]
     },
     "service" : {
-        "serviceHeaderBG" : "../../images/garage2.jpg"
+        "serviceHeaderBG" : "../../images/garage2.jpg",
+        "cards" : [
+            {
+                "image" : "",
+                "nameProduct" : "Oil Change",
+                "titlePrice" : "120",
+                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+            }
+        ]
     },
     "team" : {
         "teamHeaderBG" : "../../images/garage.jpg",
-        "danImg" : "../../images/NS_0018.png",
-        "patImg" : "../../images/NS_0018.png"
+        "owners" : {
+            "dan" : {
+                "name" : "Daniel Doyle",
+                "image" : "../../images/NS_0018.png",
+                "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+            },
+            "pat" : {
+                "name" : "Patrick Doyle",
+                "image" : "../../images/NS_0018.png",
+                "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+            }
+        },
+        "cards" : [
+            {
+                "image" : "../../images/testEmployee.jpg",
+                "nameProduct" : "Chris Stehm",
+                "titlePrice" : "Sales Manager/Everything Else",
+                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+            },
+            {
+                "image" : "../../images/testEmployee.jpg",
+                "nameProduct" : "John",
+                "titlePrice" : "Mechanic",
+                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+            }
+        ]
     },
     "blog" : {
         

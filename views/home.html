@@ -1,31 +1,61 @@
-<div class="row expanded">
-    <div class="columns large-12 small-12 fullHeaderContainer">
-        <div class="fullHeaderImgContainer">
-<!--            <video class="fullHeaderVid"></video>-->
+<div class="row expanded parallaxRow">
+    <div class="columns large-12 small-12 fullHeaderContainer" id="fullHeaderContainerHome">
+        <div class="fullHeaderImgContainer" id="homeHeaderContainer">
             <img class="fullHeaderImg cover" ng-src="{{ homeData.homeHeaderBG }}" />
         </div>
-        <div class="row class expanded fullHeaderImgOverlayContainer">
-            <div class="row expanded centerFlex">
+    </div>
 
-                
+    <div class="row expanded aboutInfo">
+        <div class="columns small-12 large-12">
+            <div id="animatedLogoContainer" class="centerFlex">
+                <div id="animatedLogoBubble" class="centerFlex">
+                    <iframe id="animatedRedlineLogo" data-src="../animated_logo.html"></iframe>
+                </div>
             </div>
+            <div class="row column expanded" id="homeData">
+                <p class="textBlock">{{ homeData.about }}</p>
+                <a href="#" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row expanded parallaxRow">
+    <div class="columns small-12 large-12 fullHeaderContainer">
+        <div class="fullHeaderImgContainer" id="homeBrandContainer">
+            <img class="fullHeaderImg cover" ng-src="{{ homeData.brandHeaderBG }}" />
+        </div>
+    </div>
+    
+    <div class="row expanded brandRow">
+<!--        Bike Slider-->
+        <div class="column large-12 small-12" id="bikeSlider">
+            <div class="flexslider" id="flexsliderOne">
+                <ul class="slides">
+                    <li ng-repeat="bike in sliderBikes">
+                        <p class="flex-caption">{{bike.name}}</p>
+                        <img ng-src="{{ bike.image }}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!--        Brand Slider-->
+        <div class="column large-12 small-12 small-centered" id="brandSlider">
+            <div class="flexslider" id="flexsliderTwo">
+                <ul class="slides">
+                    <li ng-repeat="brand in sliderBrands">
+                        <img ng-src="{{ brand.logo }}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column large-12 small-12 textRow">
+            <p class="textBlock">{{ homeData.brand }}</p>
+            <a href="#" class="btn">Contact Us</a>
         </div>
     </div>
 </div>
 
-<div class="row expanded aboutRow">
-    <div class="columns small-12 large-12">
-        <div id="animatedLogoContainer">
-            <div id="animatedLogoBubble" class="centerFlex">
-                <img ng-src="{{ logo }}">
-            </div>
-        </div>
-        <p>{{ homeData.about }}</p>
-    </div>
-</div>
-
-<div class="row expanded brandRow">
-    <div class="columns small-12 large-12">
-        <p>{{ homeData.brand }}</p>
-    </div>
-</div>
+<exp-services info=""></exp-services>
