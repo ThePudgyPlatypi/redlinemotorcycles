@@ -1,22 +1,21 @@
 
 <div class="row expanded parallaxRow">
 
-    <div class="columns large-12 small-12 fullHeaderContainer">
-        <div class="fullHeaderImgContainer">
-            <img class="fullHeaderImg cover" ng-src="{{ serviceData.serviceHeaderBG }}" />
+    <div class="columns large-12 small-12 fullHeaderContainer" ng-attr-id="{{'fullHeaderContainer-' + info.name}}">
+        <div class="fullHeaderImgContainer" ng-attr-id="{{'fullHeaderImgContainer-' + info.name}}">
+            <img class="fullHeaderImg cover" ng-src="{{ serviceData.headerBG }}" />
         </div>
     </div>
 
     <div class="row expanded fullHeaderImgOverlayContainer">
-        <div class="row expanded serviceHeader centerFlex">
+        <div class="row expanded serviceHeader">
             <div class="serviceGraphicContainer columns large-8 small-12">
-                <p>Select a part on the bike or use the Service Index to view various service information</p>
                 <iframe scrolling="no" src="../../Service_animation_final.html" class="serviceGraphic"></iframe>
+                <p>Click on a bike part for service information or use the service index</p>
             </div>
             <div class="serviceTable columns large-4 small-12">
-                <img class="centerHeaderLogo" ng-src="{{ logo }}" />
+<!--                <img class="centerHeaderLogo" ng-src="{{ logo }}" />-->
                 <div class="transparentContainer">
-                    <div class="transparentBG"></div>
                     <table class="hover">
                         <thead>
                             <tr>
@@ -24,6 +23,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>Get things that are this</td>
+                            </tr>
+                            <tr>
+                                <td>Do things that are that</td>
+                            </tr>
+                            <tr>
+                                <td>yay! stuff!</td>
+                            </tr>
+                            <tr>
+                                <td>Do things that are that</td>
+                            </tr>
                             <tr>
                                 <td>Get things that are this</td>
                             </tr>

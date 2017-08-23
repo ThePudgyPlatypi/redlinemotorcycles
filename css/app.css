@@ -86,6 +86,10 @@ iframe {
     margin-bottom: 20px;
 }
 
+.parallaxRow {
+    position: relative;
+    overflow: hidden;
+}
 
 /*Navigation styling*/
 /*---------------------------------------------*/
@@ -180,6 +184,11 @@ iframe {
     color: #AFADAE;
 }
 
+
+.cardRow {
+    padding: 50px;
+}
+
 .cardImage {
     height: 200px;
     width: 200px;
@@ -221,18 +230,38 @@ iframe {
     
 }
 
+/*Grid Styling*/
+/*---------------------------------------------*/
+
+.grid-col {
+    position: relative;
+    width: 20%;
+}
+
+.grid-img {
+    height: 300px; 
+    width: 100%;
+    object-fit: cover;
+}
+
+.mediaImgOverlay {
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 /*Full Page header styling */
 /*---------------------------------------------*/
 
-.parallaxRow {
-    position: relative;
-    overflow: hidden;
-}
 
 .fullHeaderContainer {
     position: absolute;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     padding: 0;
     margin: 0;
     z-index: -4;
@@ -254,15 +283,31 @@ iframe {
     width: 100%;
 }
 
-.transparentContainer {
-    position: relative;
+@media screen and (max-width: 1024px) {
+    .fullHeaderImgOverlayContainer {
+        min-height: 50vh;
+    }
 }
 
-.transparentBG {
+/*half Page header styling */
+/*---------------------------------------------*/
+
+.halfHeaderContainer {
+    min-height: 50vh;
+    width: 100vw;
     position: absolute;
 }
 
-/*Full page TEAM Page */
+.halfHeaderImgContainer {
+    
+}
+
+.halfHeaderImg {
+    min-width: 100vw;
+    min-height: 50vh;
+}
+
+/*TEAM Page */
 /*---------------------------------------------*/
 .ownerLeft {
     position: absolute;
@@ -284,30 +329,22 @@ iframe {
     height: 100%;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1024px) {
     .ownerLeft {
-        left: -10%;
-        height: 70vh;
+        left: -5%;
+        height: 50vh;
     }
     .ownerRight {
-        right: -10%;
-        height: 70vh;
+        right: -5%;
+        height: 50vh;
     }
-    
 }
 
 @media screen and (max-width: 460px) {
-    .ownerLeft {
-        left: -25%;
-        height: 60vh;
-    }
+    .ownerLeft, 
     .ownerRight {
-        right: -25%;
-        height: 60vh;
-    }
-    .centerHeaderLogo {
-        width: 300px;
-        height: 300px;
+        opacity: 0;
+        transition: all 0.2s;
     }
 }
 
@@ -315,36 +352,97 @@ iframe {
     padding: 50px;
 }
 
-.cardRow {
-    padding: 50px;
+#teamCrewContainer  {
+    background-image: url(../images/original.jpg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
-/*Full Page Service Header*/
+/*Service */
 /*---------------------------------------------*/
 
 .serviceHeader {
-    height: 100vh;
+    height: 100%;
     position: relative;
     padding: 0;
 }
 
 .serviceGraphicContainer {
-    width: 100%;
-    height: 100%;
+    max-height: 100vh;
+}
+
+.serviceGraphicContainer p {
+    margin-top: -100px;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .serviceGraphicContainer p {
+        margin-top: -30px;
+    }
 }
 
 .serviceGraphic {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+    .serviceGraphic {
+        min-height: 50vh;
+    }
 }
 
 .serviceTable {
-
+    margin-top: 40vh;
+    padding-right: 50px;
 }
 
-/*Half page header styling */
-/*---------------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .serviceTable {
+        margin-top: 0;
+        padding-right: 0;
+    }
+}
 
+.transparentContainer {
+   
+}
+
+#canvas {
+    position: absolute; 
+    display: none; 
+    background-color:rgba(255, 255, 255, 0);
+}
+
+#animation_container {
+    background-color:rgba(255, 255, 255, 0); 
+    width: 100%; 
+    height: 100%;
+}
+
+#dom_overlay_container {
+    pointer-events: none; 
+    overflow: hidden; 
+    width: 1000px; 
+    height: 600px; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    display: none;
+}
+
+#_preload_div_ {
+    display: inline-block; 
+    height: 600px; 
+    width: 1000px; 
+    vertical-align: middle;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
 
 /*Home styling */
 /*---------------------------------------------*/
@@ -399,7 +497,7 @@ iframe {
     color: #040707;
 }
 
-#homeBrandContainer  {
+#homeBrandContainer {
    transform: translateY(-1050px);
 }
 

@@ -11,10 +11,14 @@
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/flexslider.css">
+<!--        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">-->
         
         <!-- vendors -->
         <script src="js/vendor/angular.js"></script>
         <script src="js/vendor/angular-route.min.js"></script>
+<!--        <script src="js/vendor/angular-animate.min.js"></script>-->
+<!--        <script src="js/vendor/angular-aria.min.js"></script>-->
+<!--        <script src="js/vendor/angular-messages.min.js"></script>-->
         <script src="js/vendor/jquery-3.2.1.min.js"></script>
         <script src="js/vendor/jquery-ui.min.js"></script>
         <script src="js/Service_animation_final.js"></script>
@@ -24,6 +28,7 @@
         <script src="js/vendor/jquery.easing.js"></script>
         <!-- Dont forget to secure the api key before launching!-->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbia3vA2GFk8iiJz8XQZtNcsRaUX8W_I8&callback=initMap"></script>
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
     </head>
     
     <body ng-app="main">
@@ -33,7 +38,11 @@
             </div>
             
             <div ng-view></div>
-        
+            
+            <div ng-controller="HomeController">
+                <media ng-if="windowWidth > 768" info="images"></media>
+            </div>
+            
             <footer-view templateInfo=""></footer-view>
         </div>
         <!-- app -->
@@ -44,6 +53,7 @@
         <script src="js/controllers/HomeController.js"></script>
         <script src="js/controllers/ServiceController.js"></script>
         <script src="js/controllers/TeamController.js"></script>
+        <script src="js/controllers/InstaController.js"></script>
         
         <!-- directives -->
         <script src="js/directives/cardDir.js"></script>
@@ -57,6 +67,7 @@
         <!-- services -->
         <script src="js/services/navigationSer.js"></script>
         <script src="js/services/informationSer.js"></script>
-        
+        <script src="js/services/instagramSer.js"></script>
+        <script src="js/services/facebookSer.js"></script>
     </body>
 </html>

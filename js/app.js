@@ -1,26 +1,63 @@
 // Angular Code
 var app = angular.module("main", ["ngRoute"]);
+var token = "4033162559.73c7dce.c39e3a13d1284ecdb809ea6322a0718e";
+var count = 15;
+var instaUrl = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=" + count;
+var colors = ["#181818", "#aeadae", "#a71e22", "#464647"];
 
-app.config(function($routeProvider) {
-   $routeProvider
-   .when("/", {
+app.config(function($routeProvider, $sceDelegateProvider) {
+    $routeProvider.when("/", {
        controller: "HomeController",
        templateUrl: "views/home.html"
-   }).when("/services", {
+    }).when("/services", {
        controller: "ServiceController",
        templateUrl: "views/service.html"
-   }).when("/team", {
+    }).when("/team", {
        controller: "TeamController",
        templateUrl: "views/team.html"
-   }).when("/blog", {
+    }).when("/blog", {
        controller: "BlogController",
        templateUrl: "views/blog.html"
-   })
-   .otherwise({
+    })
+    .otherwise({
        redirectTo: "/"
-   })
+    });
+    
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        instaUrl
+    ]);
 });
 
+// facebook API
+//app.run(['$rootScope', '$window', function($rootScope, $window) {
+//  $rootScope.user = {};
+//    $window.fbAsyncInit = function() {
+//        FB.init({ 
+//            appId: '1131275933639244',
+//            channelUrl: 'views/channel.html',
+//            status: true, 
+//            cookie: true, 
+//            xfbml: true,
+//            version: 'v2.4'
+//        });
+//    };
+//
+//    (function(d){
+//        // load the Facebook javascript SDK
+//        var js,
+//        id = 'facebook-jssdk',
+//        ref = d.getElementsByTagName('script')[0];
+//        if (d.getElementById(id)) {
+//            return;
+//        }
+//        js = d.createElement('script');
+//        js.id = id;
+//        js.async = true;
+//        js.src = "//connect.facebook.net/en_US/sdk.js";
+//        ref.parentNode.insertBefore(js, ref);
+//    }(document));
+//}]);
 
 // Foundation
 $(document).foundation();
@@ -57,6 +94,17 @@ $(function() {
 //            }, 1500);
         }
     });
+//    var gridImg = document.getElementsByClassName("grid-img");
+//    var mediaOverlay = document.getElementsByClassName("mediaImgOverlay");
+//    
+//    console.log(gridImg.length);
+//    for(var i = 0; i < gridImg.length; i++) {
+//        var ran = 
+//        var color = colors[ran];
+//        alert(color);
+//        $(mediaOverlay[i]).css("background-color", color);
+//    };
+//    console.log(getRandomColor(0, colors.length));
 });
 
 
@@ -66,8 +114,6 @@ $(function() {
 //home "onLoad" calls
 function homeOnLoad() {
     parallax($(".fullHeaderContainer"), 1.7);
-//    parallax($("#fullHeaderContainerHome"), 1.7);
-//    parallax($("#homeBrandContainer"), 1.7);
     animatedRedlineLogo();
     
     $(function() {
@@ -102,6 +148,7 @@ function homeOnLoad() {
     
     initMap();
 }
+
 
 function animatedRedlineLogo() {
     var homeIframe = $("#animatedRedlineLogo");

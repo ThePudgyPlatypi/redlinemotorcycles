@@ -1,4 +1,5 @@
-app.controller("TeamController", ["$scope", "information", function($scope, information) {
+app.controller("TeamController", ["$scope", "information", "$window", function($scope, information, $window) {
+    $scope.windowWidth = $window.innerWidth;
     information.then(function(data) {
         $scope.logo = data.logo;
         $scope.teamData = data.team;

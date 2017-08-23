@@ -2,29 +2,30 @@
     <div class="columns large-12 small-12 fullHeaderContainer">
         <div class="fullHeaderImgContainer">
 <!--            <video class="fullHeaderVid"></video>-->
-            <img class="fullHeaderImg cover" ng-src="{{ teamData.teamHeaderBG }}" />
+            <img class="fullHeaderImg cover" ng-src="{{ teamData.headerBG }}" />
         </div>
     </div>
     
     <div class="fullHeaderImgOverlayContainer centerFlex">
         <img class="centerHeaderLogo" ng-src="{{ logo }}" />
         <div class="ownerLeft"> 
-            <img ng-src="{{ owners.dan.image }}" />
+            <img ng-if="windowWidth > 1024" ng-src="{{ owners.dan.image }}" />
         </div>
         <div class="ownerRight">
-            <img ng-src="{{ owners.pat.image }}" />
+            <img ng-if="windowWidth > 1024" ng-src="{{ owners.pat.image }}" />
         </div>
     </div>
     
 </div>
+
 <div class="row expanded ownerBioRow darkBG">
     <h2>The Owners</h2>
     <div class="column large-6 small-12" ng-repeat="owner in owners">
         <div class="row expanded">
-            <div class="column large-4">
+            <div class="column large-4 small-4">
                 <img ng-src="{{owner.image}}">
             </div>
-            <div class="column large-8">
+            <div class="column large-8 small-8">
                 <h3>{{ owner.name }}</h3>
                 <p>{{owner.bio}}</p>
             </div>
@@ -32,9 +33,14 @@
     </div>
 </div>
 
-<div class="row expanded cardRow">
-    <h2>The Crew</h2>
-    <div class="column large-12 small-12" ng-repeat="card in cards">
-        <card info="card"></card>
+
+<div>
+    
+    <div class="row expanded cardRow">
+        <div id="teamCrewContainer"></div>
+        <h2>The Crew</h2>
+        <div class="column large-12 small-12" ng-repeat="card in cards">
+            <card info="card"></card>
+        </div>
     </div>
 </div>

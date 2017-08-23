@@ -100,13 +100,16 @@ function handleComplete(evt,comp) {
 }
 </script>
 <!-- write your code here -->
+<link href="css/app.css" type="text/css" rel="stylesheet">
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:1000px; height:600px">
-		<canvas id="canvas" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 0);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:600px; position: absolute; left: 0px; top: 0; display: none;">
-		</div>
+	<div id="animation_container">
+		<canvas id="canvas"></canvas>
+		<div id="dom_overlay_container"></div>
 	</div>
-    <div id='_preload_div_' style='display: inline-block; height:600px; width: 1000px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="images/_preloader.gif" style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_'>	
+        <span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	
+        <img src="images/_preloader.gif" style='vertical-align: middle; max-height: 100%'/>
+    </div>
 </body>
 </html>
