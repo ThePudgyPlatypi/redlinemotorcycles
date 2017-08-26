@@ -6,7 +6,7 @@
         </div>
     </div>
     
-    <div class="fullHeaderImgOverlayContainer centerFlex">
+    <div class="fullHeaderImgOverlayContainer crewRow centerFlex">
         <img class="centerHeaderLogo" ng-src="{{ logo }}" />
         <div class="ownerLeft"> 
             <img ng-if="windowWidth > 1024" ng-src="{{ owners.dan.image }}" />
@@ -19,7 +19,14 @@
 </div>
 
 <div class="row expanded ownerBioRow darkBG">
-    <h2>The Owners</h2>
+    <div class="banner">
+        <div class="centerFlex headerGauge">
+            <div class="centerFlex headerGaugeInside">
+                <h1>The Crew</h1>
+            </div>
+        </div>
+    </div>
+    
     <div class="column large-6 small-12" ng-repeat="owner in owners">
         <div class="row expanded">
             <div class="column large-4 small-4">
@@ -35,12 +42,11 @@
 
 
 <div>
-    
     <div class="row expanded cardRow">
-        <div id="teamCrewContainer"></div>
-        <h2>The Crew</h2>
         <div class="column large-12 small-12" ng-repeat="card in cards">
             <card info="card"></card>
         </div>
+       
     </div>
+     <a href="#" class="btn-dark">Work for us</a>
 </div>

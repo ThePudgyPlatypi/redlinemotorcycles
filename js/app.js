@@ -15,17 +15,16 @@ app.config(function($routeProvider, $sceDelegateProvider) {
     }).when("/team", {
        controller: "TeamController",
        templateUrl: "views/team.html"
-    }).when("/blog", {
-       controller: "BlogController",
-       templateUrl: "views/blog.html"
+    }).when("/media", {
+       controller: "MediaController",
+       templateUrl: "views/media.html"
     })
     .otherwise({
        redirectTo: "/"
     });
     
     $sceDelegateProvider.resourceUrlWhitelist([
-        'self',
-        instaUrl
+        'self', instaUrl
     ]);
 });
 
@@ -62,50 +61,8 @@ app.config(function($routeProvider, $sceDelegateProvider) {
 // Foundation
 $(document).foundation();
 
-
 // jQuery 
-$(function() {
-    //        extend navBar
-    $("body").click(function(e) {
-        // if the circle doesnt class activeNav
-        if(!$(".navCircle").hasClass("active")) {      
-            // add active class and scaledown
-            $(".navCircle").addClass("active navCircleScaleDown");  
-            // animate the width
-            $(".redBar").animate({
-                width: "100%"
-            }, 300, "easeOutQuint");    
-             // add solidNav for no opacity
-//            $(".nav").addClass("solidNav");                  
-            $(".navCircle").removeClass("navCircleLeft");
-            $(".navLink").css("opacity", "1");
-            // else if active is there
-        } else if ($(".navCircle").hasClass("active")) { 
-            // retract the animation
-            $(".redBar").animate({
-                width: "3%"
-            }, 300, "easeOutQuint"); 
-            // remove active state/navCircle
-            $(".navCircle").removeClass("active navCircleScaleDown"); 
-            $(".navCircle").addClass("navCircleLeft");
-            $(".navLink").css("opacity", "0");
-//            setTimeout(function(){ 
-//                $(".nav").removeClass("solidNav"); 
-//            }, 1500);
-        }
-    });
-//    var gridImg = document.getElementsByClassName("grid-img");
-//    var mediaOverlay = document.getElementsByClassName("mediaImgOverlay");
-//    
-//    console.log(gridImg.length);
-//    for(var i = 0; i < gridImg.length; i++) {
-//        var ran = 
-//        var color = colors[ran];
-//        alert(color);
-//        $(mediaOverlay[i]).css("background-color", color);
-//    };
-//    console.log(getRandomColor(0, colors.length));
-});
+$(function() {});
 
 
 //--------------------------------------------------
@@ -145,8 +102,11 @@ function homeOnLoad() {
             directionNav: false
         });
     });
-    
-    initMap();
+}
+
+function mediaOnLoad() {
+    parallax($(".halfHeaderImgContainer"), 3);
+    parallax($(".centerHeaderLogo"), 4);
 }
 
 

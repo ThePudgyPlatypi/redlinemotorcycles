@@ -1,4 +1,12 @@
 {
+    "address" : {
+        "logo" : "../../images/Logo-official-small.png",
+        "address" : "1628 Route 206",
+        "city" : "Tabernacle",
+        "state" : "NJ",
+        "zipcode" : "08088",
+        "phone" : "(609)207-9572"
+    },
     "logo" : "../../images/Logo-official-small.png",
     "home" : {
         "name" : "home",
@@ -90,6 +98,65 @@
                 "titlePrice" : "120",
                 "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
             }
+        ],
+        "selector" : "",
+        "serviceCat" : [
+            {
+                "name" : "seat",
+                "services" : [
+                    {
+                        "name" : "seat change"
+                    }
+                ]
+            },
+            {
+                "name" : "tank",
+                "services" : [
+                    {
+                        "name" : "De-Rust"
+                    }
+                ]
+            },
+            {
+                "name" : "controls",
+                "services" : [
+                    {
+                        "name" : "Clutch Adjustment"
+                    }
+                ]
+            },
+            {
+                "name" : "exhaust",
+                "services" : [
+                    {
+                        "name" : "Aftermarket Exhaust Install"
+                    }
+                ]
+            },
+            {
+                "name" : "engine",
+                "services" : [
+                    {
+                        "name" : "Carb Clean"
+                    }
+                ]
+            },
+            {
+                "name" : "frontwheel",
+                "services" : [
+                    {
+                        "name" : "Fork Seals"
+                    }
+                ]
+            },
+            {
+                "name" : "rearwheel",
+                "services" : [
+                    {
+                        "name" : "Chain Adjustment"
+                    }
+                ]
+            }
         ]
     },
     "team" : {
@@ -123,7 +190,36 @@
             }
         ]
     },
-    "blog" : {
-        
+    "media" : {
+        "headerBG" :  "../../images/wallpaper.jpg"
+    },
+    "footer" : {
+        "socialmedia" : [
+            {
+                "name" : "facebook",
+                "icon" : "fa fa-facebook-official",
+                "url" : "https://www.facebook.com/RedlineMotorcyclesNJ/"
+            },
+            {
+                "name" : "twitter",
+                "icon" : "fa fa-twitter-square",
+                "url" : "https://twitter.com/RedlineMotorsNJ"
+            },
+            {
+                "name" : "instagram",
+                "icon" : "fa fa-instagram",
+                "url" : "https://www.instagram.com/redlinemotorcycles/"
+            },
+            {
+                "name" : "youtube",
+                "icon" : "fa fa-youtube-square",
+                "url" : "https://www.youtube.com/channel/UCvvw6B7KJ9Ye_3OGBNhvklA"
+            },
+            {
+                "name" : "linkedin",
+                "icon" : "fa fa-linkedin-square",
+                "url" : "https://www.linkedin.com/in/redline-motorcycles/"
+            }
+        ]
     }
 }

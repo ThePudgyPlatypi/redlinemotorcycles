@@ -712,27 +712,51 @@ p.nominalBounds = new cjs.Rectangle(-95.5,-129.4,544.6,631.9);
 
 	// timeline functions:
 	this.frame_0 = function() {
+        
 		this.main.gotoAndStop(0);
 		var root = this;
 		var selectors = root.main.children;
 		var names = ["seat", "tank", "controls", "exhaust", "engine", "frontWheel", "rearWheel"]
+        var data;
+        
+		var jsonRequest = function(method, url, callback) {
+            var request = new XMLHttpRequest();
+            request.open(method, url, true);
+            request.onload = function() {
+               callback(request.onerror, JSON.parse(request.responseText));
+            };
+            request.send();
+        };
+        
+        
+        jsonRequest("GET", '../resources/json/information.json', function(err, response) {
+            if (err) {
+                console.log("uh-oh");
+            } else {
+                data = response;
+                for(var i = 1; i < selectors.length; i++) {
+			         selectors[i].activeSelector = false;
+			         selectors[i].name = names[i - 1];
+			         selectors[i].on("click", function(e) {
+                        for(var i = 1; i < selectors.length; i++) {
+                            if (selectors[i].activeSelector) {
+                                selectors[i].activeSelector = false;
+                                selectors[i].gotoAndPlay("click_off");
+                            } else if (selectors[i] == e.currentTarget) {
+                                e.currentTarget.activeSelector = true;
+                                e.currentTarget.gotoAndPlay("click");
+                                data.service.selector = {
+                                    name: selectors[i].name,
+                                    id: i
+                                };
+                                console.log(data.service.selector);
+                            }
+                        }
+			         });
+                }
+            }
+        });
 		
-		for(var i = 1; i < selectors.length; i++) {
-			selectors[i].activeSelector = false;
-			selectors[i].name = names[i - 1];
-			selectors[i].on("click", function(e) {
-				for(var i = 1; i < selectors.length; i++) {
-					if (selectors[i].activeSelector) {
-						selectors[i].activeSelector = false;
-						selectors[i].gotoAndPlay("click_off");
-					} else if (selectors[i] == e.currentTarget) {
-						e.currentTarget.activeSelector = true;
-						e.currentTarget.gotoAndPlay("click");
-						console.log(i + " " + selectors[i].name);
-					}
-				}
-			});
-		}
 	}
 
 	// actions tween:

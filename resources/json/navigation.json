@@ -1,6 +1,20 @@
 {
     "logo" : "images/Logo-official-small.png",
-    "links" : [
+    "desktopLinks" : [
+        {
+            "name" : "Home",
+            "url" : "/"
+        },
+        {
+            "name" : "Services",
+            "url" : "services"
+        }, 
+        {
+            "name" : "Team",
+            "url" : "team"
+        }
+    ],
+    "mobileLinks" : [
         {
             "name" : "Home",
             "url" : "/"
@@ -14,9 +28,8 @@
             "url" : "team"
         },
         {
-            "name" : "Blog",
-            "url" : "blog"
+            "name" : "Media",
+            "url" : "media"
         }
-    ],
-    "class" : "stupid data"
+    ]
 }

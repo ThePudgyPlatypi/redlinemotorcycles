@@ -9,43 +9,18 @@
 
     <div class="row expanded fullHeaderImgOverlayContainer">
         <div class="row expanded serviceHeader">
-            <div class="serviceGraphicContainer columns large-8 small-12">
+            <div class="serviceGraphicContainer columns large-8 small-12" ng-click="changeTable()">
                 <iframe scrolling="no" src="../../Service_animation_final.html" class="serviceGraphic"></iframe>
                 <p>Click on a bike part for service information or use the service index</p>
             </div>
             <div class="serviceTable columns large-4 small-12">
 <!--                <img class="centerHeaderLogo" ng-src="{{ logo }}" />-->
                 <div class="transparentContainer">
-                    <table class="hover">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Get things that are this</td>
-                            </tr>
-                            <tr>
-                                <td>Do things that are that</td>
-                            </tr>
-                            <tr>
-                                <td>yay! stuff!</td>
-                            </tr>
-                            <tr>
-                                <td>Do things that are that</td>
-                            </tr>
-                            <tr>
-                                <td>Get things that are this</td>
-                            </tr>
-                            <tr>
-                                <td>Do things that are that</td>
-                            </tr>
-                            <tr>
-                                <td>yay! stuff!</td>
-                            </tr>
-                        </tbody>
+                    <p ng-show="content"></p>
+                    <table class="hover" id="serviceTable">
+                        
                     </table>
+                    <a href="#" class="btn">Contact us</a>
                 </div>
             </div>
         </div>
@@ -53,10 +28,19 @@
 </div>
 
 <div class="row expanded cardRow darkBG">
-    <h2>Common Service Needs</h2>
+    <div class="banner">
+        <div class="centerFlex headerGauge">
+            <div class="centerFlex headerGaugeInside">
+                <h1>Common<br>Service</h1>
+            </div>
+        </div>
+    </div>
+    
     <div class="column large-12" ng-repeat="card in cards">
         <card info="card"></card>
     </div>
+    
+   <a href="#" class="btn">Contact us</a>
 </div>
 
 <exp-services info=""></exp-services>

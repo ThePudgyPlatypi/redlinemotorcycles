@@ -4,6 +4,37 @@
     </div>
     
     <div class="column large-6 small-12">
-        <p>this is for links</p>
+        <div class="address">
+            <p>{{address.address}}</p>
+            <p>{{address.city}}, {{address.state}} {{address.zipcode}}</p>
+            <p>
+                <a href="#">
+                    {{address.phone}}
+                </a>
+            </p>
+        </div>
+        <div>
+            <ul class="socialMedia">
+                <li ng-repeat="link in info.socialmedia">
+                    <a ng-href="{{link.url}}">
+                        <i class="{{link.icon}} fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="footerLinks">
+                <li ng-repeat="link2 in links.links">
+                    <a ng-href="#!{{link2.url}}">
+                        <p>{{link2.name}}</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Careers</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
