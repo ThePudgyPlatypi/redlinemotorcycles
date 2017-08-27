@@ -44,7 +44,7 @@ h1 {
 
 a {
     color: #AFADAE;
-    transition: all 0.2s;
+    transition: transform 0.2s;
 }
 
 a:hover {
@@ -138,16 +138,15 @@ iframe {
 .navContainer {
     position: fixed;
     top: 50px;
-    width: 100%;
     z-index: 1;
+    transition: all 0.1s;
 }
 
 .nav {
-    width: 100%;
     height: 100px;
     text-align: center;
     opacity: 1;
-    transition: opacity 0.2s;
+    
 }
 
 /*
@@ -166,8 +165,10 @@ iframe {
     top: 10%;
     width: 40px;
     height: 80px;
-/*    border-top: 5px solid #AFADAE;*/
     border-bottom: 5px solid #040707;
+    transition: width 0.2s ease-in;
+    transition: height 0.2s ease-in;
+    transition: opactiy 0.2s ease-in;
 }
 
 .navCircle {
@@ -182,12 +183,30 @@ iframe {
     transition: all 0.2s ease-in;
 }
 
+@media screen and (max-width: 640px) {
+    .redBar {
+        width: 30px;
+        height: 60px;
+    }
+    
+    .navCircle {
+        width: 75px;
+        height: 75px;
+    }
+}
+
 .navCircleScaleDown {
     transform: scale(0.9);
 }
 
 .navCircleLeft {
-    left: -1%;
+    left: -10px;
+}
+
+@media screen and (max-width: 640px) {
+    .navCircleLeft {
+        left: -20px;
+    }
 }
 
 .navLogo {
@@ -210,9 +229,16 @@ iframe {
     color: white;
     font-size: 1.5rem;
     height: 100%;
-    display: block;
     padding-top: 20px;
+    display: block;
     opacity: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .navLink {
+        padding-top: 15px;
+        font-size: 1rem;
+    }
 }
 
 .navLink:hover {

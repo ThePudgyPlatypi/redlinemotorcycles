@@ -115,7 +115,7 @@ function mediaOnLoad() {
 function animatedRedlineLogo() {
     var homeIframe = $("#animatedRedlineLogo");
     var homeIframeData = homeIframe.data("src");
-    $(window).scrollStopped(function() {
+    $(window).scrollInViewOnce(function() {
         if (homeIframe.isOnScreen()){
             homeIframe.prop('src', homeIframeData);
         };
@@ -155,7 +155,7 @@ $.fn.isOnScreen = function(){
 }
 
 // function to see if an element has appeared on screen before
-$.fn.scrollStopped = function(callback) {
+$.fn.scrollInViewOnce = function(callback) {
     var fired = 0;
     $(this).scroll(function(){
         if(fired == 0) {
@@ -163,9 +163,21 @@ $.fn.scrollStopped = function(callback) {
             if ($this.data('scrollTimeout')) {
               clearTimeout($this.data('scrollTimeout'));
             }
-            $this.data('scrollTimeout', setTimeout(callback,250,self));
+            $this.data('scrollTimeout', setTimeout(callback,150,self));
             fired = 1;
         };
+    });
+};
+
+// same function as above without the counter
+// this will launch a function once scrolling stops with a delay
+$.fn.scrollEnd = function(callback, timeout) {
+    $(this).scroll(function(){
+        var $this = $(this);
+        if ($this.data('scrollTimeout')) {
+          clearTimeout($this.data('scrollTimeout'));
+        }
+        $this.data('scrollTimeout', setTimeout(callback, timeout));
     });
 };
 

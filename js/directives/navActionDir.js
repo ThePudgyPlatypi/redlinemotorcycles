@@ -4,7 +4,10 @@ app.directive("navAction", ["$window", function($window) {
         link: function(scope, elem, attrs) {
             var windowWidth = $window.innerWidth;
             var navCircle = $(elem);
-//            var windowWidth = $window.innerWidth;
+            var mobile = windowWidth <= 640;
+            var desktop = windowWidth > 640;
+            var lastScrollTop = 0;
+            var scrollEnd;
             //Desktop
             //navOpen: on click it opens up
             //navClose: click anywhere on the body and it closes or if you scroll
@@ -12,12 +15,14 @@ app.directive("navAction", ["$window", function($window) {
             function navOpen() {
                 // add active class and scaledown
                 navCircle.addClass("active navCircleScaleDown"); 
+                $(".navContainer").css("width", "100%");
+                $(".navLink").show().css("opacity", "1");
                 // animate the width
                 $(".redBar").animate({
                     width: "100%"
                 }, 300, "easeOutQuint");
                 // add any opacity the nav has lost
-                $(".navLink").css("opacity", "1");
+                $(".nav").css("opacity", "1");
                 //adding other listeners with slight delay so it
                 //doesnt fire right away
                 setTimeout(function() {
@@ -27,6 +32,7 @@ app.directive("navAction", ["$window", function($window) {
             }
             
             function navClose() {
+                $(".navLink").hide().css("opacity", "0");
                 // retract the animation
                 $(".redBar").animate({
                     width: "40px"
@@ -34,9 +40,9 @@ app.directive("navAction", ["$window", function($window) {
                 //remove active class and navCircle scale change
                 $(".navCircle").removeClass("active navCircleScaleDown");
                 // add any opacity the nav has lost
-                $(".navLink").css("opacity", "0");
+                $(".navContainer").css("width", "0%");
                 //removing event listeners
-                navCircle.off("click", navCircle, navClose);
+                navCircle.off("click", navClose);
                 $("body").off("click", navClose);
                 $(window).off("scroll", navClose);
             }
@@ -51,24 +57,47 @@ app.directive("navAction", ["$window", function($window) {
             //mobileOpen: if you click it it displays the nav items
             //mobileClose: if you click on the body or navCircle and the nav is extended it disappears if you scroll and the nav is extended it shrinks back to the scrollUp state and waits until scrolling stops, pauses then shrinks to the idle state
             
-            function mobileNavInit() {
-                
-            }
-            
-            function mobileIdle() {
-                
-            }
-            
-            function mobileScrollUp() {
-                
+            function mobileOpen() {
+                navCircle.removeClass("navCircleLeft");
+                $(".redBar").removeClass("navCircleLeft");
+                clearTimeout($(window).data('scrollTimeout'));
+                navOpen();
             }
             
             function mobileClose() {
-                
+                $(".redBar").addClass("navCircleLeft");
+                navClose();
+            }
+            
+            function mobileIdle() {
+                navCircle.addClass("navCircleLeft");
+//                $(".redBar").addClass("navCircleLeft");
+                $(".nav").css("opacity", "0.5");
+            }
+            
+            function mobileScroll() {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    //scroll Down
+                    mobileIdle();
+                } else {
+                    //scroll up
+                    mobileScrollUp();
+                    $(window).scrollEnd(function() {
+                        mobileIdle();
+                    }, 3000);
+                }
+                lastScrollTop = st;
+            }
+            
+            function mobileScrollUp() {
+                navCircle.removeClass("navCircleLeft");
+                $(".redBar").removeClass("navCircleLeft"); 
+                $(".nav").css("opacity", "1");
             }
             
             // firing functions 
-            if (windowWidth > 768) {
+            if (desktop) {
                 navCircle.click(function(e) {
                     // if the circle doesnt class activeNav
                     if(!navCircle.hasClass("active")) {      
@@ -76,9 +105,16 @@ app.directive("navAction", ["$window", function($window) {
                     } else if ($(".navCircle").hasClass("active")) { 
                         navClose();
                     }
-                })
-            } else {
-                
+                });
+            } else if (mobile) {
+                $(window).on("scroll", mobileScroll);
+                navCircle.click(function(e) {
+                    if(!navCircle.hasClass("active")) {
+                        mobileOpen();
+                    } else if ($(".navCircle").hasClass("active")) { 
+                        mobileClose();
+                    }
+                });
             }
         }
     }
