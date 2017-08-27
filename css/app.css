@@ -164,7 +164,7 @@ iframe {
     position: relative;
     background-color: #A71E24;
     top: 10%;
-    width: 3%;
+    width: 40px;
     height: 80px;
 /*    border-top: 5px solid #AFADAE;*/
     border-bottom: 5px solid #040707;
@@ -212,6 +212,7 @@ iframe {
     height: 100%;
     display: block;
     padding-top: 20px;
+    opacity: 0;
 }
 
 .navLink:hover {
@@ -493,7 +494,7 @@ iframe {
         min-height: 50vh;
     }
 }
-
+/*Service table styling */
 .serviceTable {
     margin-top: 40vh;
     padding-right: 50px;
@@ -506,8 +507,22 @@ iframe {
     }
 }
 
-.transparentContainer {
-   
+.serviceTable thead {
+    background-color: #A71E24;
+}
+
+.serviceTable thead th {
+    text-align: center;  
+    color: white;
+}
+
+.serviceTable tbody tr:nth-child(even) {
+    background-color:  #aeadae;
+}
+
+.serviceTable tbody tr:nth-child(odd) {
+    background-color:  #464647;
+    color: white;
 }
 
 #canvas {

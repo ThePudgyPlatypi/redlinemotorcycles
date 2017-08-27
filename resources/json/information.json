@@ -103,57 +103,79 @@
         "serviceCat" : [
             {
                 "name" : "seat",
+                "title" : "Seat, Saddlebags...",
                 "services" : [
                     {
-                        "name" : "seat change"
+                        "name" : "seat change",
+                        "description" : ""
+                    },
+                    {
+                        "name" : "Saddlebag install",
+                        "description" : ""
                     }
                 ]
             },
             {
                 "name" : "tank",
+                "title" : "Tank, Fuel system...",
                 "services" : [
                     {
-                        "name" : "De-Rust"
+                        "name" : "De-Rust",
+                        "description" : ""
+                    },
+                    {
+                        "name" : "Replace Petcock",
+                        "description" : ""
                     }
                 ]
             },
             {
                 "name" : "controls",
+                "title" : "Controls, Handlebars, Grips...",
                 "services" : [
                     {
-                        "name" : "Clutch Adjustment"
+                        "name" : "Clutch Adjustment",
+                        "description" : ""
                     }
                 ]
             },
             {
                 "name" : "exhaust",
+                "title" : "Exhaust, Footpegs...",
                 "services" : [
                     {
-                        "name" : "Aftermarket Exhaust Install"
+                        "name" : "Aftermarket Exhaust Install",
+                        "description" : ""
                     }
                 ]
             },
             {
                 "name" : "engine",
+                "title" : "Rebuilds, Carburetor, Injectors...",
                 "services" : [
                     {
-                        "name" : "Carb Clean"
+                        "name" : "Carb Clean",
+                        "description" : ""
                     }
                 ]
             },
             {
-                "name" : "frontwheel",
+                "name" : "frontWheel",
+                "title" : "Front Brakes, Forks, Suspension...",
                 "services" : [
                     {
-                        "name" : "Fork Seals"
+                        "name" : "Fork Seals",
+                        "description" : ""
                     }
                 ]
             },
             {
-                "name" : "rearwheel",
+                "name" : "rearWheel",
+                "title" : "Rear Chain, Brakes, Suspension... ",
                 "services" : [
                     {
-                        "name" : "Chain Adjustment"
+                        "name" : "Chain Adjustment",
+                        "description" : ""
                     }
                 ]
             }

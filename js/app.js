@@ -61,6 +61,8 @@ app.config(function($routeProvider, $sceDelegateProvider) {
 // Foundation
 $(document).foundation();
 
+    
+    
 // jQuery 
 $(function() {});
 
@@ -259,3 +261,4 @@ function initMap() {
         map: map
     });
 }
+

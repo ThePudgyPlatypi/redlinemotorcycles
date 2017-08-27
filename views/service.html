@@ -10,15 +10,25 @@
     <div class="row expanded fullHeaderImgOverlayContainer">
         <div class="row expanded serviceHeader">
             <div class="serviceGraphicContainer columns large-8 small-12" ng-click="changeTable()">
-                <iframe scrolling="no" src="../../Service_animation_final.html" class="serviceGraphic"></iframe>
+                <iframe name="serviceIframe" scrolling="no" src="../../Service_animation_final.html" class="serviceGraphic" id="serviceIframe"></iframe>
                 <p>Click on a bike part for service information or use the service index</p>
             </div>
             <div class="serviceTable columns large-4 small-12">
 <!--                <img class="centerHeaderLogo" ng-src="{{ logo }}" />-->
                 <div class="transparentContainer">
-                    <p ng-show="content"></p>
-                    <table class="hover" id="serviceTable">
-                        
+                    <table ng-if="selector.name" id="serviceTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    {{selectedCat.title}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="service in selectedServices">
+                                <td>{{service.name}} </td>
+                            </tr>
+                        </tbody>
                     </table>
                     <a href="#" class="btn">Contact us</a>
                 </div>
