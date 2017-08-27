@@ -37,10 +37,10 @@ app.directive("navAction", ["$window", function($window) {
                 $(".redBar").animate({
                     width: "40px"
                 }, 300, "easeOutQuint"); 
+                // add any opacity the nav has lost
+                $(".navContainer").css("width", "10%");
                 //remove active class and navCircle scale change
                 $(".navCircle").removeClass("active navCircleScaleDown");
-                // add any opacity the nav has lost
-                $(".navContainer").css("width", "0%");
                 //removing event listeners
                 navCircle.off("click", navClose);
                 $("body").off("click", navClose);
