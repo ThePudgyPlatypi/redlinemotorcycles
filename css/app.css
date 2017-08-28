@@ -44,11 +44,15 @@ h1 {
 
 a {
     color: #AFADAE;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
 
 a:hover {
     color: white;
+}
+
+a:hover.btn, 
+a:hover.btn-dark {
     transform: scale(1.05);
 }
 
@@ -76,6 +80,14 @@ iframe {
     padding: 40px 0;
 }
 
+.lightText {
+    color: white;
+}
+
+.darkText {
+    color: black;
+}
+
 .textBlock {
     max-width: 700px;
     display: inline-block;
@@ -98,7 +110,7 @@ iframe {
     padding: 20px;
     background-color: #A71E24;
     width: 200px;
-    display: block;
+    display: inline-block;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -133,6 +145,11 @@ iframe {
     opacity: 0;
 }
 
+.centerDiv {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
 /*Navigation styling*/
 /*---------------------------------------------*/
 .navContainer {
@@ -146,7 +163,6 @@ iframe {
     height: 100px;
     text-align: center;
     opacity: 1;
-    
 }
 
 /*
@@ -656,11 +672,11 @@ iframe {
 
 .flex-caption {
     width: 100%;
-    padding: 1%;
-    margin: 25px 0 -60px 0;
+    padding: 10px;
+    margin: -25px 0 50px 0;
     left: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+/*    background: rgba(0,0,0,.5);*/
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0,0,0,.3);
     font-size: 1.5rem;

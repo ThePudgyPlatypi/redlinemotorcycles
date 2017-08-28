@@ -16,6 +16,7 @@
             <div class="serviceTable columns large-4 small-12">
 <!--                <img class="centerHeaderLogo" ng-src="{{ logo }}" />-->
                 <div class="transparentContainer">
+                    <p class="lightText">Click on an item to view detailed services here.</p>
                     <table ng-if="selector.name" id="serviceTable">
                         <thead>
                             <tr>
@@ -30,7 +31,9 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="#" class="btn">Contact us</a>
+
+                        <a href="#" class="btn">Contact us</a>
+    
                 </div>
             </div>
         </div>
@@ -49,8 +52,9 @@
     <div class="column large-12" ng-repeat="card in cards">
         <card info="card"></card>
     </div>
-    
-   <a href="#" class="btn">Contact us</a>
+    <div class="centerDiv">
+        <a href="#" class="btn">Contact us</a>
+    </div>
 </div>
 
 <exp-services info=""></exp-services>

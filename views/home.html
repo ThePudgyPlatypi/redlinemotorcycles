@@ -20,7 +20,9 @@
             </div>
             <div class="row column expanded" id="homeData">
                 <p class="textBlock">{{ homeData.about }}</p>
-                <a href="#" class="btn">Contact Us</a>
+                <div class="centerDiv">
+                    <a href="#" class="btn">Contact Us</a>
+                </div>
             </div>
         </div>
     </div>
@@ -40,8 +42,8 @@
             <div class="flexslider" id="flexsliderOne">
                 <ul class="slides">
                     <li ng-repeat="bike in sliderBikes">
-                        <p class="flex-caption">{{bike.name}}</p>
                         <img ng-src="{{ bike.image }}">
+                        <p class="flex-caption">{{bike.name}}</p>
                     </li>
                 </ul>
             </div>
@@ -59,7 +61,9 @@
 
         <div class="column large-12 small-12 textRow">
             <p class="textBlock">{{ homeData.brand }}</p>
-            <a href="#" class="btn">Contact Us</a>
+            <div class="centerDiv">
+                <a href="#" class="btn">Contact Us</a>
+            </div>
         </div>
     </div>
 </div>

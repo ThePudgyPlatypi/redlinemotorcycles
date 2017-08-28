@@ -23,4 +23,5 @@ app.controller("HomeController", ["$scope", "navLinks", "information", "instagra
     });
     
     $scope.$on("$viewContentLoaded", homeOnLoad);
+    
 }]);    

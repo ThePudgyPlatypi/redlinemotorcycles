@@ -17,19 +17,35 @@
         "bikes" : [
             {
                 "name" : "Sport Bikes",
-                "image" : "../../images/gsxr.png"
+                "image" : "../../images/cbr.png"
+            },
+            {
+                "name" : "Super Naked Bikes",
+                "image" : "../../images/supernake.png"
+            },
+            {
+                "name" : "Cruisers",
+                "image" : "../../images/cruiser.png"
+            },
+            {
+                "name" : "Touring Bikes",
+                "image" : "../../images/cruiserTouring.png"
+            },
+            {
+                "name" : "Retro Modern",
+                "image" : "../../images/retroModern.png"
             },
             {
                 "name" : "Dirt Bikes",
                 "image" : "../../images/dirtbike.png"
             },
             {
-                "name" : "Cruisers",
-                "image" : "../../images/cruiserTouring.png"
+                "name" : "ATV's",
+                "image" : "../../images/atv.png"
             },
             {
-                "name" : "ATV's",
-                "image" : "../../images/cbr.png"
+                "name" : "UTV's",
+                "image" : "../../images/utv.png"
             }
         ],
         "brands" : [
@@ -90,7 +106,7 @@
     },
     "service" : {
         "name" : "service",
-        "headerBG" : "../../images/garage2.jpg",
+        "headerBG" : "../../images/serviceBG.jpg",
         "cards" : [
             {
                 "image" : "",
