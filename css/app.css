@@ -27,6 +27,7 @@ html, body {
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
 }
+
 @media screen and (max-width: 460px) {
     
     html, body {
@@ -128,6 +129,8 @@ iframe {
 
 .parallaxRow {
     position: relative;
+    min-height: 100vh;
+    width: auto;
     overflow: hidden;
 }
 
@@ -325,6 +328,24 @@ iframe {
     
 }
 
+/*Form Styling*/
+/*---------------------------------------------*/
+
+.contactForm {
+    text-align: center;
+    background-color: #464647;
+    padding-top: 40px;
+}
+
+form {
+    max-width: 700px;
+    display: inline-block;
+}
+
+form textarea {
+    height: 200px;
+}
+
 /*Banner styling */
 /*---------------------------------------------*/
 
@@ -392,51 +413,50 @@ iframe {
 
 .fullHeaderContainer {
     position: absolute;
-    min-height: 100vh;
-    width: 100vw;
     padding: 0;
     margin: 0;
     z-index: -4;
 }
 
-.fullHeaderImgContainer {
-}
-
 .fullHeaderImg {
     position: absolute;
     top: 0;
-    min-width: 100vw;
-    min-height: 1080px;
+    min-height: 120vh;
+    min-width: 100%;
 }
 
 .fullHeaderImgOverlayContainer {
+    position: relative;
     text-align: center;
-    min-height: 100vh;
-    width: 100%;
+    min-height: 120vh;
 }
 
-@media screen and (max-width: 1024px) {
-    .fullHeaderImgOverlayContainer {
-        min-height: 50vh;
+.vertCenter {
+    padding-top: 10%;
+}
+
+.vertCenter h2 {
+/*    margin-top: -10px;*/
+}
+
+@media screen and (max-width: 1163px) {
+    .vertCenter h2 {
+        font-size: 1.5rem;
     }
 }
 
-/*half Page header styling */
-/*---------------------------------------------*/
-
-.halfHeaderContainer {
-    min-height: 50vh;
-    width: 100vw;
-    position: absolute;
+.centerHeaderLogo {
+    transition: all 0.2s ease-in;
 }
 
-.halfHeaderImgContainer {
+.vertCenter address {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
     
-}
-
-.halfHeaderImg {
-    min-width: 100vw;
-    min-height: 50vh;
 }
 
 /*TEAM Page */
@@ -495,13 +515,6 @@ iframe {
     border-top: 40px solid #464647;
 }
 
-#teamCrewContainer  {
-    background-image: url(../images/original.jpg);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
 /*Service */
 /*---------------------------------------------*/
 
@@ -538,7 +551,7 @@ iframe {
 }
 /*Service table styling */
 .serviceTable {
-    margin-top: 40vh;
+    margin-top: 20vh;
     padding-right: 50px;
 }
 
@@ -546,6 +559,11 @@ iframe {
     .serviceTable {
         margin-top: 0;
         padding-right: 0;
+    }
+    
+    .serviceTable img {
+        display: none;
+        opacity: 0;
     }
 }
 
@@ -604,16 +622,11 @@ iframe {
 /*Home styling */
 /*---------------------------------------------*/
 
-#fullHeaderContainerHome .fullHeaderImg {
-    height: 120vh;
-}
-
 .aboutInfo {
     position: relative;
     background-color: #040707;
     min-height: 50vh;
     padding: 0;
-    margin-top: 120vh;
     text-align: center;
     color: #AFADAE;
     border-top: 40px solid #464647;
@@ -654,13 +667,6 @@ iframe {
     color: #040707;
 }
 
-#homeBrandContainer {
-   transform: translateY(-1050px);
-}
-
-#homeBrandContainer img {
-    opacity: 0.8;
-}
 
 .darkBG .textBlock { 
     margin-top: 0;
@@ -670,26 +676,38 @@ iframe {
     margin-top: 50px;
 }
 
-.flex-caption {
-    width: 100%;
-    padding: 10px;
-    margin: -25px 0 50px 0;
-    left: 0;
-    bottom: 0;
-/*    background: rgba(0,0,0,.5);*/
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-    font-size: 1.5rem;
-    line-height: 18px;
+@media screen and (max-width: 460px) {
+    #bikeSlider {
+        margin-bottom: 0;
+    }
 }
 
-@media screen and (max-width: 600px) {
-    margin-bottom: 0;
+.bikeSliderImg {
+    margin: 0 auto;
 }
 
 #brandSlider {
     margin-bottom: 50px;
-    width: 75%;
+    width: 50%;
+}
+
+#brandSlider img {
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    #brandSlider {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+/*Media Page */
+/*---------------------------------------------*/
+
+.mediaRow {
+    border-top: 40px solid #464647;
+    background-color: #040707;
 }
 
 /*Lightbox styling */

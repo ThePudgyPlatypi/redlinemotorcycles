@@ -1,5 +1,5 @@
 // Angular Code
-var app = angular.module("main", ["ngRoute"]);
+var app = angular.module("main", ["ngRoute", "formly", "formlyBootstrap"]);
 var token = "4033162559.73c7dce.c39e3a13d1284ecdb809ea6322a0718e";
 var count = 15;
 var instaUrl = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=" + count;
@@ -18,14 +18,23 @@ app.config(function($routeProvider, $sceDelegateProvider) {
     }).when("/media", {
        controller: "MediaController",
        templateUrl: "views/media.html"
-    })
-    .otherwise({
+    }).when("/careers", {
+        controller: "TeamController",
+        templateUrl: "views/careers.html"
+    }).otherwise({
        redirectTo: "/"
     });
     
     $sceDelegateProvider.resourceUrlWhitelist([
         'self', instaUrl
     ]);
+});
+
+app.run(function($rootScope, $location, $anchorScroll) {
+  //when the route is changed scroll to the proper element.
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    if($location.hash()) $anchorScroll();  
+  });
 });
 
 // facebook API
@@ -64,8 +73,7 @@ $(document).foundation();
     
     
 // jQuery 
-$(function() {
-});
+$(function() {});
 
 
 //--------------------------------------------------
@@ -73,43 +81,56 @@ $(function() {
 
 //home "onLoad" calls
 function homeOnLoad() {
-    parallax($(".fullHeaderContainer"), 1.7);
+    parallax($(".fullHeaderImg"), 2);
+    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
     animatedRedlineLogo();
     
     $(function() {
-        $("#flexsliderOne").flexslider({
-            animation: "slide",
-            slideshow: true,
-            slideshowSpeed: 5000,
-            animationSpeed: 1500,
-            animationLoop: true,
-            pauseOnAction: true,
-            pauseOnHover: true,
-            useCSS: false,
-            touch: true,
-            easing: "easeInOutBack",
-            controlNav: false
+        $("#bikeSlider").slick({
+            centerMode: true,
+            lazyLoad: "ondemand",
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 1000,
+            swipe: true,
+            cssEase: "cubic-bezier(0.680, -0.550, 0.265, 1.550)",
         });
-
-         $("#flexsliderTwo").flexslider({
-            animation: "slide",
-            slideshow: true,
-            slideshowSpeed: 0,
-            animationSpeed: 7000,
-            animationLoop: true,
-            useCSS: false,
-            touch: true,
-            easing: "linear",
-            controlNav: false,
-            itemWidth: 400, 
-            directionNav: false
+        
+        $("#brandSlider").slick({
+            arrows: false,
+            infinite: true,
+            variableWidth: true,
+            lazyLoad: "ondemand",
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            centerMode: true,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 1000,
         });
     });
+    
 }
 
 function mediaOnLoad() {
-    parallax($(".halfHeaderImgContainer"), 3);
-    parallax($(".centerHeaderLogo"), 4);
+    parallax($(".fullHeaderImg"), 2);
+    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+}
+
+function serviceOnLoad() {
+    parallax($(".fullHeaderImg"), 2);
+    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+}
+
+function teamOnLoad() {
+    parallax($(".fullHeaderImg"), 1.7);
+    parallax($(".fullHeaderImgOverlayContainer"), 1.3);
+    parallax($(".ownerRight"), 4);
+    parallax($(".ownerLeft"), 4);
 }
 
 
@@ -168,7 +189,7 @@ $.fn.scrollInViewOnce = function(callback) {
             fired = 1;
         };
     });
-};
+}
 
 // same function as above without the counter
 // this will launch a function once scrolling stops with a delay
@@ -180,7 +201,7 @@ $.fn.scrollEnd = function(callback, timeout) {
         }
         $this.data('scrollTimeout', setTimeout(callback, timeout));
     });
-};
+}
 
 //google maps api
 function initMap() {

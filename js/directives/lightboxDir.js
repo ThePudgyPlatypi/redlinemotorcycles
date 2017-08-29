@@ -3,6 +3,7 @@ app.directive("lightbox", function() {
         restrict: "A",
         link: function(scope,elem,attrs) {
             $(elem).click(function(e) {
+                console.log("Media Lightbox");
                 e.preventDefault();
                 var image_src =  $(this).attr("href");
                 var alt_src =  $(this).find(".grid-img").attr("alt");
@@ -29,6 +30,7 @@ app.directive("lightbox", function() {
                 $('#lightbox').on('click', function() {
                    $('#lightbox').hide();
                 });
+                
             })
         }
     }

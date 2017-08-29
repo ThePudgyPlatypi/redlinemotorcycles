@@ -1,0 +1,40 @@
+<div class="row expanded parallaxRow">
+    <div class="columns large-12 small-12 fullHeaderContainer">
+       <img class="fullHeaderImg cover" ng-src="{{ mediaData.headerBG }}" />
+    </div>
+    
+    <div class="fullHeaderImgOverlayContainer">
+        <div class="row expanded vertCenter">
+            <div class="column small-12 large-12 small-centered">
+                <img class="centerHeaderLogo" ng-src="{{ logo }}" />
+            </div>
+            <div class="column small-12 small-centered">
+                <h2>
+                    <a href="#">(609) 207-9572</a>
+                </h2>
+            </div>
+            <div class="column small-12 small-centered">
+                <address>
+                    1628 Route 206 Ste C<br>
+                    Tabernacle, NJ 08088
+                </address>
+            </div>
+            <div class="column small-12 small-centered">
+                <a href="#" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row expanded mediaRow">
+    <div class="column small-12">
+        <div class="banner">
+            <div class="centerFlex headerGauge">
+                <div class="centerFlex headerGaugeInside">
+                    <h1>Careers</h1>
+                </div>
+            </div>
+        </div>
+        <card info="images" ng-repeat="job in jobs"></card>
+    </div>
+</div>

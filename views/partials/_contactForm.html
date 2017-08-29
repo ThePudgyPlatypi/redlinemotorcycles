@@ -1,0 +1,14 @@
+<div class="row expanded">
+    <div class="column small-12">
+        <h2>Contact</h2>
+        <a href="tel:6092079572">(609) 207-9572</a>
+        <p>Give us a call! It is our preferred method of contact.</p>
+    </div>
+    <div class="column small-12">
+        <form ng-submit="info.onSubmit()">
+          <formly-form model="info.contact" fields="info.contactFields">
+            <button class="btn" type="submit">Submit</button>
+          </formly-form>
+        </form>
+    </div>
+</div>

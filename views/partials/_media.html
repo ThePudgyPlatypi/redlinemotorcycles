@@ -1,6 +1,6 @@
 <div class="row expanded large-up-5 medium-up-3 small-up-1">
     <div class="column grid-col" ng-repeat="image in info">
-        <a target="_blank" lightbox ng-href="{{image.images.standard_resolution.url}}">
+        <a lightbox ng-href="{{image.images.standard_resolution.url}}">
             <img class="grid-img" ng-src="{{image.images.low_resolution.url}}" alt="{{image.caption.text}}">
 <!--            <div class="mediaOverlay" ng-style="{'background-color' : color()}"></div>-->
         </a>

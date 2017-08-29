@@ -1,4 +1,4 @@
-app.controller("TeamController", ["$scope", "information", "$window", function($scope, information, $window) {
+app.controller("TeamController", ["$scope", "information", "$window", function($scope, information, $window, $location, $anchorScroll, $routeParams) {
     $scope.windowWidth = $window.innerWidth;
     information.then(function(data) {
         $scope.logo = data.logo;
@@ -6,6 +6,5 @@ app.controller("TeamController", ["$scope", "information", "$window", function($
         $scope.owners = $scope.teamData.owners;
         $scope.cards = $scope.teamData.cards;
     });
-    $scope.$on("$viewContentLoaded", parallax($(".fullHeaderImgContainer"), 3));
-    $scope.$on("$viewContentLoaded", parallax($(".centerHeaderLogo"), 4));
+    $scope.$on("$viewContentLoaded", teamOnLoad);
 }]);

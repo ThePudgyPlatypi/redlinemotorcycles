@@ -1,4 +1,4 @@
-app.controller("HomeController", ["$scope", "navLinks", "information", "instagram", "$window", function($scope, navLinks, information, instagram, $window) {
+app.controller("HomeController", ["$scope", "navLinks", "information", "instagram", "$window", function($scope, navLinks, information, instagram, $window, $location, $anchorScroll, $routeParams) {
     $scope.windowWidth = $window.innerWidth;
     $scope.mobileLinks;
     navLinks.then(function (data) {
@@ -22,6 +22,6 @@ app.controller("HomeController", ["$scope", "navLinks", "information", "instagra
         $scope.sliderBrands = $scope.homeData.brands;
     });
     
-    $scope.$on("$viewContentLoaded", homeOnLoad);
+    $scope.$on("$viewContentLoaded", homeOnLoad());
     
 }]);    

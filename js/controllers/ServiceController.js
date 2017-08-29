@@ -1,4 +1,4 @@
-app.controller("ServiceController", ["$scope", "information", "$window", "$compile", function($scope, information, $window, $compile) {
+app.controller("ServiceController", ["$scope", "information", "$window", "$compile", function($scope, information, $window, $compile, $location, $anchorScroll, $routeParams) {
     $scope.windowWidth = $window.innerWidth;
     $scope.selector;
     $scope.serviceCat;
@@ -34,5 +34,5 @@ app.controller("ServiceController", ["$scope", "information", "$window", "$compi
             console.log("changed");
         }
     });
-    $scope.$on("$viewContentLoaded", parallax($(".fullHeaderImgContainer"), 3));
+    $scope.$on("$viewContentLoaded", serviceOnLoad);
 }]);

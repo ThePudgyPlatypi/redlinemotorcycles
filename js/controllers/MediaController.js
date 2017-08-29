@@ -20,5 +20,5 @@ app.controller("MediaController", ["$scope", "navLinks", "information", "instagr
         $scope.mediaData = data.media;
     });
     
-    $scope.$on("$viewContentLoaded", mediaOnLoad());
+    $scope.$on("$viewContentLoaded", mediaOnLoad);
 }]);
