@@ -12,7 +12,7 @@
         "name" : "home",
         "headerBG" : "../../images/wallpaper.jpg",
         "videoBG" : "../../videos/RainyRedline.mp4",
-        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
+        "about" : "Here at Redline Motorcycles we excel at getting your Motorcycle, Dirt Bike, ATV, or UTV back up and running. With more than 35 years of combine service experience, Patrick and Daniel Doyle have all the knowledge and expertise to give you piece of mind. Quality work is what we strive for here at Redline Motorcycles so call us today at (609) 207-9572, or use the contact form below, to schedule service. If you receive our voicemail then please leave your name, contact phone number, an appropriate time to reach you, explain what vehicle you have, what the problem is, and we will return your call as soon as we can.",
         "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
         "brandHeaderBG" : "../../images/Motorcycle-RideBlur.jpg",
         "bikes" : [
@@ -111,9 +111,15 @@
         "cards" : [
             {
                 "image" : "",
-                "nameProduct" : "Oil Change",
-                "titlePrice" : "120",
-                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+                "nameProduct" : "Oil Change Special",
+                "titlePrice" : "$119.99",
+                "bioDesc" : "The Oil Change Special is the final word in motorcycle oil changes. With this service we change the oil and filter, check and set the tire pressures in both tires, lube and adjust chain (if applicable), adjust drive belt (if applicable), change final drive oil (if applicable), clean and tighten battery terminals, check and adjust controls, check and top off all fluids, check all lights for proper operation, and finally inspect brakes and tires for excessive wear! *phew* That's a lot!"
+            },
+            {
+                "image" : "",
+                "nameProduct" : "Tire Change",
+                "titlePrice" : "$29.99 - $119.99",
+                "bioDesc" : "Tire change price varies depending on a few things 1) Do you already have a tire, or are we getting it for you? 2) Are you going to bring the whole bike in, or just bring us the wheel? 3) What kind of bike do you own? Sport bikes are typically the cheapest to change, and full dresser touring bikes the most expensive. Drop us a line, or contact us thru the contact form, and we can talk to you about the options and let you know how much it will be for your application."
             }
         ],
         "selector" : "",
@@ -206,12 +212,12 @@
             "dan" : {
                 "name" : "Daniel Doyle",
                 "image" : "../../images/NS_0018.png",
-                "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+                "bio" : "Daniel is an avid outdoorsman who’s blood runs on gasoline. He has a strong passion for racing whether it be on two wheels in hare scrambles or four wheels at the drag strip. He was at the top of his class while attending tech school and has also been in the industry for 20+ years. He now is the other half of the Redline Motorcycles team."
             },
             "pat" : {
                 "name" : "Patrick Doyle",
                 "image" : "../../images/NS_0018.png",
-                "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
+                "bio" : "Patrick grew up around motorcycles and ATVs, and has an undeniable passion for racing and riding all forms of both. That love of Powersports led him to enroll and graduate top of his class at AMI. Having completed over 20+ years at a large Honda and Yamaha dealer as the Lead Tech and Service Manager, he now stands alongside his brother as one half of Redline Motorcycles."
             }
         },
         "cards" : [
