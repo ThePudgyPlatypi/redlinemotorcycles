@@ -110,16 +110,39 @@
         "headerBG" : "../../images/serviceBG.jpg",
         "cards" : [
             {
-                "image" : "",
+                "image" : "../../images/OilSpecial.svg",
+                "imagePNG" : "../../images/OilSpecial.png",
                 "nameProduct" : "Oil Change Special",
                 "titlePrice" : "$119.99",
                 "bioDesc" : "The Oil Change Special is the final word in motorcycle oil changes. With this service we change the oil and filter, check and set the tire pressures in both tires, lube and adjust chain (if applicable), adjust drive belt (if applicable), change final drive oil (if applicable), clean and tighten battery terminals, check and adjust controls, check and top off all fluids, check all lights for proper operation, and finally inspect brakes and tires for excessive wear! *phew* That's a lot!"
             },
             {
-                "image" : "",
+                "image" : "../../images/WheelChange.svg",
+                "imagePNG" : "../../images/WheelChange.png",
                 "nameProduct" : "Tire Change",
                 "titlePrice" : "$29.99 - $119.99",
                 "bioDesc" : "Tire change price varies depending on a few things 1) Do you already have a tire, or are we getting it for you? 2) Are you going to bring the whole bike in, or just bring us the wheel? 3) What kind of bike do you own? Sport bikes are typically the cheapest to change, and full dresser touring bikes the most expensive. Drop us a line, or contact us thru the contact form, and we can talk to you about the options and let you know how much it will be for your application."
+            },
+            {
+                "image" : "../../images/brakes.svg",
+                "imagePNG" : "../../images/brakes.png",
+                "nameProduct" : "Brake Pads",
+                "titlePrice" : "$59.99 & up",
+                "bioDesc" : "Brakes are arguable the most important thing on your bike! You might have all the horsepower in the world, but if you can only enjoy it once before you meet the end of the road then there is little point. Keep your brakes in good working order with frequent pad changes and rotor inspections. Price can vary depending on your application, and what kind of pads you want so please contact us either by phone, or with the contact form to get a more accurate quote."
+            },
+            {
+                "image" : "../../images/helmet.svg",
+                "imagePNG" : "../../images/helmet.png",
+                "nameProduct" : "Saftey Check",
+                "titlePrice" : "$99.99",
+                "bioDesc" : "Safety is the most important thing when riding a motorcycle. The freedom and open road are wonderful, but being able to reach your destination in one piece is just as wonderful. If you have any doubts about whether your ride is in tip top condition then bring it up to us. We check all your fluids, and top them off if need be, we check all your lights, we check your chain/belt/final drive to make sure everything is in safe working order, we check all your controls, make sure the wheels, tires, and brakes are up to snuff, set your tire pressures, and give your bike a once over for any other audible or visual clues that might hint to larger problems."
+            },
+            {
+                "image" : "../../images/service.svg",
+                "imagePNG" : "../../images/service.png",
+                "nameProduct" : "Scheduled Service Intervals",
+                "titlePrice" : "Price Varies",
+                "bioDesc" : "We are able to take care of any of your scheduled service intervals for your bike or ATV. Whether its 5,000 miles or 50,000 miles, we have you covered. Price can vary depending on the service that is taking place so please contact us if you want something a bit more accurate."
             }
         ],
         "selector" : "",
@@ -212,11 +235,13 @@
             "dan" : {
                 "name" : "Daniel Doyle",
                 "image" : "../../images/NS_0018.png",
+                "imageMobile" : "../../images/testEmployee.jpg",
                 "bio" : "Daniel is an avid outdoorsman who’s blood runs on gasoline. He has a strong passion for racing whether it be on two wheels in hare scrambles or four wheels at the drag strip. He was at the top of his class while attending tech school and has also been in the industry for 20+ years. He now is the other half of the Redline Motorcycles team."
             },
             "pat" : {
                 "name" : "Patrick Doyle",
                 "image" : "../../images/NS_0018.png",
+                "imageMobile" : "../../images/testEmployee.jpg",
                 "bio" : "Patrick grew up around motorcycles and ATVs, and has an undeniable passion for racing and riding all forms of both. That love of Powersports led him to enroll and graduate top of his class at AMI. Having completed over 20+ years at a large Honda and Yamaha dealer as the Lead Tech and Service Manager, he now stands alongside his brother as one half of Redline Motorcycles."
             }
         },

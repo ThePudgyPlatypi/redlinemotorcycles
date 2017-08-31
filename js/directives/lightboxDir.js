@@ -1,12 +1,17 @@
+//issue #1 Doesnt cloase when you click on the menu so need to get that working
+//Issue #2 does not update the alt text
+
 app.directive("lightbox", function() {
     return {
         restrict: "A",
         link: function(scope,elem,attrs) {
             $(elem).click(function(e) {
-                console.log("Media Lightbox");
+                console.log(alt_src);
+                console.log(alt);
                 e.preventDefault();
                 var image_src =  $(this).attr("href");
-                var alt_src =  $(this).find(".grid-img").attr("alt");
+                var alt_src =  $(this).children();
+                var alt = alt_src.attr("alt");
                 var childOverlay = $(this).children(".mediaOverlay").css("background-color");
                 if($("#lightbox").length > 0) {
                     $("#content").html('<img src="' + image_src + '"/>');
@@ -22,12 +27,12 @@ app.directive("lightbox", function() {
                                     '<img src="' + image_src +'" />' +
                                 '</div>' +
                             '</div>' +
-                            '<p>' + alt_src + '</p>' +
+                            '<p>' + alt + '</p>' +
                         '</div>';
                     $("body").append(lightbox);
                 }
 
-                $('#lightbox').on('click', function() {
+                $("#lightbox").on('click', function() {
                    $('#lightbox').hide();
                 });
                 

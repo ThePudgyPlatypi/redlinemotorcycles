@@ -20,7 +20,6 @@ app.controller("ServiceController", ["$scope", "information", "$window", "$compi
                 if ($scope.selector.name == $scope.serviceCat[i].name) {
                     $scope.selectedServices = $scope.serviceCat[i].services; 
                     $scope.selectedCat = $scope.serviceCat[i];
-                    console.log($scope.selectedServices[0].name);
                 }
             }
         });
@@ -34,5 +33,13 @@ app.controller("ServiceController", ["$scope", "information", "$window", "$compi
             console.log("changed");
         }
     });
+    
+    $scope.click = function(title) {
+        console.log("assign click");
+        $scope.selector = title;
+        $scope.selectedCat = title;
+        $scope.selectedServices = title.services;    
+    }
+    
     $scope.$on("$viewContentLoaded", serviceOnLoad);
 }]);

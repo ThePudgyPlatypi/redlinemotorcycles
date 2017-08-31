@@ -73,7 +73,8 @@ $(document).foundation();
     
     
 // jQuery 
-$(function() {});
+$(function() {
+});
 
 
 //--------------------------------------------------
@@ -124,6 +125,37 @@ function mediaOnLoad() {
 function serviceOnLoad() {
     parallax($(".fullHeaderImg"), 2);
     parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+    
+    function clickOpen() {
+        $("#indexContainer").addClass("active").animate({
+            right: 0
+        }, 300, "easeOutQuint");
+    }
+
+    function clickClose() {
+        console.log("time delay events removed");
+        $("#indexContainer").removeClass("active").animate({
+            right: "-" + 45 + "%"
+        }, 300, "easeOutQuint");
+        $("body").off("click", clickClose);
+        $(window).off("scroll", clickClose);
+    }
+    
+    
+    $("#indexContainer").on("click", function() {
+        console.log("click");
+        if(!$("#indexContainer").hasClass("active")) {
+            clickOpen();
+            setTimeout(function() {
+                $("body").on("click", clickClose);
+                $(window).on("scroll", clickClose);
+                console.log("time delay events set");
+            }, 1);
+            
+        } else if ($("#indexContainer").hasClass("active")) {
+            clickClose();
+        }
+    });
 }
 
 function teamOnLoad() {
@@ -155,7 +187,7 @@ function parallax(element, intensity) {
 }
 
 // viewport function 
-$.fn.isOnScreen = function(){
+$.fn.isOnScreen = function() {
     
     var win = $(window);
     

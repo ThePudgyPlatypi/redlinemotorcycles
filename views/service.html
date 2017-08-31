@@ -1,6 +1,19 @@
 
-<div class="row expanded parallaxRow">
-
+<div class="row expanded parallaxRow" id="service">
+    <div id="indexContainer">
+        <div class="indexMenu">
+            <div class="tab">
+                <p>Index</p>
+            </div>
+            <ol>
+                <li ng-repeat="title in serviceData.serviceCat">
+                    <a ng-click="click(title)">{{ title.title }}</a>
+                </li>
+            </ol>
+        </div>
+        
+    </div>
+    
     <div class="columns large-12 small-12 fullHeaderContainer">
         <div class="fullHeaderImgContainer">
             <img class="fullHeaderImg cover" ng-src="{{ serviceData.headerBG }}" />
@@ -24,7 +37,7 @@
                                 <th>
                                     {{selectedCat.title}}
                                 </th>
-                            </tr>`
+                            </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="service in selectedServices">

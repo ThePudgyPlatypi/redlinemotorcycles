@@ -1,4 +1,4 @@
-<div class="row expanded parallaxRow">
+<div class="row expanded parallaxRow" id="team">
     <div class="columns large-12 small-12 fullHeaderContainer">
         <div class="fullHeaderImgContainer">
 <!--            <video class="fullHeaderVid"></video>-->
@@ -57,13 +57,33 @@
     </div>
     
     <div class="column large-6 small-12" ng-repeat="owner in owners">
-        <div class="row expanded">
-            <div class="column large-4 small-4">
+        <div class="row expanded" ng-if="$index < 1">
+            <div class="column large-4 small-12" >
+                <img ng-if="windowWidth < 460" class="ownerImage" ng-src="{{owner.imageMobile}}">
+                <img ng-if="windowWidth > 460" ng-src="{{owner.image}}">
+            </div>
+            <div class="column large-8 small-12">
+                <h3 class="wrap">{{ owner.name }}</h3>
+                <p class="wrap">{{owner.bio}}</p>
+            </div>
+        </div>
+        <div class="row expanded" ng-if="$index >= 1 && windowWidth > 460">
+            <div class="column large-8 small-12 small-push-12">
+                <h3 class="wrapRight">{{ owner.name }}</h3>
+                <p class="wrapRight">{{owner.bio}}</p>
+            </div>
+            <div class="column large-4 small-12 small-pull-12">
                 <img ng-src="{{owner.image}}">
             </div>
-            <div class="column large-8 small-8">
-                <h3>{{ owner.name }}</h3>
-                <p>{{owner.bio}}</p>
+        </div>
+        
+        <div class="row expanded" ng-if="$index >= 1 && windowWidth <= 460">
+            <div class="column large-4 small-12 small-pull-12">
+                <img class="ownerImage" ng-src="{{owner.imageMobile}}">
+            </div>
+            <div class="column large-8 small-12 small-push-12">
+                <h3 class="wrapRight">{{ owner.name }}</h3>
+                <p class="wrapRight">{{owner.bio}}</p>
             </div>
         </div>
     </div>

@@ -94,6 +94,13 @@ iframe {
     display: inline-block;
 }
 
+@media screen and (max-width: 460px) {
+    .textBlock {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 .darkBG {
     background-color: #040707;
     color: #AFADAE;
@@ -260,8 +267,86 @@ iframe {
     }
 }
 
+@media screen and (max-width: 460px) {
+    .navLink {
+        font-size: 0.9rem;
+    }
+    
+    .redBar ul {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .navLink {
+        font-size: 0.8rem;
+    }
+}
+
 .navLink:hover {
     color: #AFADAE;
+}
+
+/*Service Index styling */
+#indexContainer {
+    position: absolute;
+    right: -45%;
+    z-index: 1;
+    width: 45%;
+/*    filter: drop-shadow(8px 8px 10px rgba(4, 7, 7, .5));*/
+    
+}
+
+.indexMenu {
+    float: right;
+    background-color: #a71e24;
+    width: 100%;
+    display: inline-block;
+    border-bottom-left-radius: 20px;
+    padding: 40px 0 40px 20px;
+}
+
+.tab {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    display: inline-block;
+    background-color: #a71e24;
+    vertical-align: top;
+    padding: 10px;
+    padding-top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: right;
+}
+
+.tab p {
+    transform: rotate(-90deg);
+    color: white;
+}
+
+.indexMenu ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.indexMenu ol li:before {
+    counter-increment: li;
+    content: counter(li) ") ";
+    color: white;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.indexMenu ol li  {
+    border-bottom: 2px solid #040707;
+}
+
+@media screen and (max-width: 460px) {
+    .indexMenu ol li {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -285,7 +370,6 @@ iframe {
     height: 200px;
     width: 200px;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .card .column {
@@ -302,15 +386,16 @@ iframe {
     }
     
     .cardImage {
-        width: 100%;
+        width: 50%;
+        height: 50%;
     }
     
     .cardImage img {
-        width: 100%;
+
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 460px) {
     .cardRow {
         padding: 0;
     }
@@ -483,6 +568,20 @@ form textarea {
 
 .ownerRight img {
     height: 100%;
+}
+
+.wrap {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.wrapRight {
+    padding-left: 20px;
+}
+
+
+.ownerImage {
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 1024px) {

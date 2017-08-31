@@ -1,3 +1,10 @@
+<!--issue #1 contact form does not submit to anything.-->
+<!--issue #2 Lightbox has some concerns-->
+<!--issue #3 Lyft is not integrated yet -->
+<!--issue #4 media overlay still does not work -->
+<!--issue #5 need all the content (video, biographies, images of everyone, all the service content)-->
+<!--issue #6 need to figure out why the darn google maps doesnt always load -->
+
 <!doctype html>
 <html lang="en" ng-app="main">
     <head>
@@ -40,7 +47,7 @@
                 <navigation ng-if="windowWidth < 768" info="mobileLinks"></navigation>
             </div>
 <!--main view-->
-            <div ng-view></div>
+            <div ng-view autoscroll="true"></div>
             
             <div class="contactForm darlGreyBG" id="contact" ng-controller="FormController">
                 <contact info="vm"></contact>
