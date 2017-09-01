@@ -26,9 +26,9 @@
         
         <script src="js/vendor/angular.min.js"></script>
         <script src="js/vendor/angular-route.min.js"></script>
-        <script src="js/vendor/api-check.min.js"></script>
-        
-        <script src="js/vendor/formly.min.js"></script>
+<!--        <script src="js/vendor/api-check.min.js"></script>-->
+<!--        -->
+<!--        <script src="js/vendor/formly.min.js"></script>-->
         <script src="js/vendor/jquery-3.2.1.min.js"></script>
         <script src="js/vendor/jquery-ui.min.js"></script>
         <script src="js/Service_animation_final.js"></script>
@@ -49,8 +49,47 @@
 <!--main view-->
             <div ng-view autoscroll="true"></div>
             
-            <div class="contactForm darlGreyBG" id="contact" ng-controller="FormController">
-                <contact info="vm"></contact>
+            <div class="contactForm darkGreyBG" id="contact" >
+                <div class="row expanded">
+                    <div class="column small-12">
+                        <h2>Contact</h2>
+                        <a href="tel:6092079572">(609) 207-9572</a>
+                        <p>Give us a call! It is our preferred method of contact.</p>
+                    </div>
+                    <div class="column small-12">
+
+                        <form ng-controller="FormController" name="contactForm" method="post" ng-submit="contactForm.$valid && handleFormSubmit(contact)" novalidate>
+
+                            <label for="firstName">First Name<span class="required"> *</span></label>
+                                <input ng-model="contact.firstName" type="text" class="form-input" id="firstName" name="firstName" placeholder="First Name" required>
+
+                            <label for="lastName">Last Name<span class="required"> *</span></label>
+                                <input ng-model="contact.lastName" type="text" class="form-input" id="lastName" name="lastName" placeholder="Last Name" required>
+
+                            <label for="email">Email Address<span class="required"> *</span></label>
+                                <input ng-model="contact.email" type="text" class="form-input" id="email" name="email" placeholder="Email@Address.com" required>
+
+                            <label for="phone">Phone Number<span class="required"> *</span></label>
+                                <input ng-model="contact.phone" type="text" class="form-input" id="phone" name="phone" placeholder="(###) ###-####" required>
+
+                            <label for="bikeYear">Bike Year<span class="required"> *</span></label>
+                                <input ng-model="contact.year" type="text" class="form-input" id="bikeYear" name="bikeYear" placeholder="Year of Bike" required>
+
+                            <label for="bikeMake">Bike Make<span class="required"> *</span></label>
+                                <input ng-model="contact.make" type="text" class="form-input" id="bikeMake" name="bikeMake" placeholder="Make of Bike" required>
+
+                            <label for="bikeModel">Bike Model<span class="required"> *</span></label>
+                                <input ng-model="contact.model" type="text" class="form-input" id="bikeModel" name="bikeModel" placeholder="Model of Bike" required>
+
+                            <label for="message">Message<span class="required"> *</span></label>
+                                <textarea ng-model="contact.message" type="text" class="form-textarea" id="message" name="message" placeholder="What can we help you with?" cols="30" rows="5" required></textarea>
+
+                            <button class="btn" ng-disabled="contactForm.$invalid" type="submit" value="Submit">Submit</button>
+
+                        </form>
+
+                    </div>
+                </div>  
             </div>
 <!--media-->
             <div ng-controller="MediaController">
@@ -64,7 +103,7 @@
         </div>
         <!-- app -->
         <script src="js/app.js"></script>
-        <script src="js/vendor/angular-formly-templates-bootstrap.min.js"></script>
+<!--        <script src="js/vendor/angular-formly-templates-bootstrap.min.js"></script>-->
         
         <!-- controllers -->
         <script src="js/controllers/MediaController.js"></script>

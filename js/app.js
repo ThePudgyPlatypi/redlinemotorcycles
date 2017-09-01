@@ -1,5 +1,5 @@
 // Angular Code
-var app = angular.module("main", ["ngRoute", "formly", "formlyBootstrap"]);
+var app = angular.module("main", ["ngRoute"]);
 var token = "4033162559.73c7dce.c39e3a13d1284ecdb809ea6322a0718e";
 var count = 15;
 var instaUrl = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=" + count;
@@ -82,7 +82,7 @@ $(function() {
 
 //home "onLoad" calls
 function homeOnLoad() {
-    parallax($(".fullHeaderImg"), 2);
+    parallax($(".fullHeaderContainer"), 2);
     parallax($(".fullHeaderImgOverlayContainer"), 1.5);
     animatedRedlineLogo();
     
