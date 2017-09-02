@@ -24,27 +24,26 @@
         <div class="row expanded serviceHeader">
             <div class="serviceGraphicContainer columns large-8 small-12" ng-click="changeTable()">
                 <iframe name="serviceIframe" scrolling="no" src="Service_animation_final.html" class="serviceGraphic" id="serviceIframe"></iframe>
-                <p>Click on a bike part for service information or use the service index</p>
             </div>
             <div class="serviceTable columns large-4 small-12">
-                <img ng-src="{{ logo }}" />
+                <img ng-src="{{ logoLight }}" />
                 <div class="transparentContainer">
-                    
-                    <p class="lightText">Click on an item to view detailed services here.</p>
-                    <table ng-if="selector.name" id="serviceTable">
-                        <thead>
-                            <tr>
-                                <th>
-                                    {{selectedCat.title}}
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="service in selectedServices">
-                                <td>{{service.name}} </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p class="whiteText">Click on any part of the bike for service information, or use the service index</p>
+                    <p class="whiteText">Click on an item to view detailed services here.</p>
+                    <div ng-if="selector.name" id="serviceTable">
+                        <h4>{{selectedCat.title}}</h4>
+                        <dl ng-repeat="service in selectedServices">
+                            <dt ng-click="showDetails = ! showDetails">
+                                {{service.name}}
+                                <a ng-if="service.description" class="moreInfo">click for more information</a>
+                            </dt>
+                            
+                            <dd ng-if="service.description" class="serviceDetails" ng-class="{'hidden': ! showDetails}"> 
+                                {{ service.description }}
+                            </dd>
+                                
+                        </dl>
+                    </div>
 
                         <a href="#!/services/#contact" class="btn">Contact us</a>
     

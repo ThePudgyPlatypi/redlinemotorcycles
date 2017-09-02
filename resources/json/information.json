@@ -8,10 +8,11 @@
         "phone" : "(609)207-9572"
     },
     "logo" : "images/Logo-official-small.png",
+    "logoLight" : "images/Redline_logo_light_small.png",
     "home" : {
         "name" : "home",
         "headerBG" : "images/wallpaper.jpg",
-        "videoBG" : "videos/testWebpage3.mp4",
+        "videoBG" : "videos/compressedFinal.mp4",
         "about" : "Here at Redline Motorcycles we excel at getting your Motorcycle, Dirt Bike, ATV, or UTV back up and running. With more than 35 years of combine service experience, Patrick and Daniel Doyle have all the knowledge and expertise to give you piece of mind. Quality work is what we strive for here at Redline Motorcycles so call us today at (609) 207-9572, or use the contact form below, to schedule service. If you receive our voicemail then please leave your name, contact phone number, an appropriate time to reach you, explain what vehicle you have, what the problem is, and we will return your call as soon as we can.",
         "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
         "brandHeaderBG" : "images/Motorcycle-RideBlur.jpg",
@@ -107,7 +108,7 @@
     },
     "service" : {
         "name" : "service",
-        "headerBG" : "images/serviceBG.jpg",
+        "headerBG" : "images/serviceBG-1.jpg",
         "cards" : [
             {
                 "image" : "images/OilSpecial.svg",
@@ -153,11 +154,11 @@
                 "services" : [
                     {
                         "name" : "seat change",
-                        "description" : ""
+                        "description" : "We are able to get you some super sweet seats and install them properly"
                     },
                     {
                         "name" : "Saddlebag install",
-                        "description" : ""
+                        "description" : "From hard mount bags to simple drape over bags we can install them all!"
                     }
                 ]
             },
@@ -171,7 +172,7 @@
                     },
                     {
                         "name" : "Replace Petcock",
-                        "description" : ""
+                        "description" : "Here we will give you a pet cock since you obviously fucked up with the first one. Try to treat this one better. They will give you eggs from your hens."
                     }
                 ]
             },
@@ -229,18 +230,18 @@
     },
     "team" : {
         "name" : "team",
-        "headerBG" : "images/garage.jpg",
+        "headerBG" : "images/teamBG.jpg",
         "crewBG" : "images/original.jpg",
         "owners" : {
             "dan" : {
                 "name" : "Daniel Doyle",
-                "image" : "images/NS_0018.png",
+                "image" : "images/danCutout.png",
                 "imageMobile" : "images/danSmall.jpg",
                 "bio" : "Daniel is an avid outdoorsman who’s blood runs on gasoline. He has a strong passion for racing whether it be on two wheels in hare scrambles or four wheels at the drag strip. He was at the top of his class while attending tech school and has also been in the industry for 20+ years. He now is the other half of the Redline Motorcycles team."
             },
             "pat" : {
                 "name" : "Patrick Doyle",
-                "image" : "images/NS_0018.png",
+                "image" : "images/patCutout.png",
                 "imageMobile" : "images/patSmall.jpg",
                 "bio" : "Patrick grew up around motorcycles and ATVs, and has an undeniable passion for racing and riding all forms of both. That love of Powersports led him to enroll and graduate top of his class at AMI. Having completed over 20+ years at a large Honda and Yamaha dealer as the Lead Tech and Service Manager, he now stands alongside his brother as one half of Redline Motorcycles."
             }

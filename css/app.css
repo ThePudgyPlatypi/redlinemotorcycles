@@ -16,7 +16,8 @@
 /*General styles*/
 /*---------------------------------------------*/
 *, html, body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -45,6 +46,8 @@ h1 {
 
 a {
     color: #AFADAE;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
 }
 
@@ -53,8 +56,15 @@ a:hover {
 }
 
 a:hover.btn, 
-a:hover.btn-dark {
-    transform: scale(1.05);
+a:hover.btn-dark,
+button.btn:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+button {
+    transition: 0.2s;
 }
 
 iframe {
@@ -64,17 +74,25 @@ iframe {
 
 .container {
     position: relative;
+    overflow: hidden;
 }
 
 .cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 /*goes on the parent of what you want to center */
 .centerFlex { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .textRow {
@@ -82,6 +100,10 @@ iframe {
 }
 
 .lightText {
+    color: #AFADAE;
+}
+
+.whiteText {
     color: white;
 }
 
@@ -110,6 +132,10 @@ iframe {
     background-color: #A71E24;
 }
 
+.whiteBG {
+    background-color: white;
+}
+
 .darkGreyBG {
     background-color: #464647;
 }
@@ -135,10 +161,10 @@ iframe {
 }
 
 .parallaxRow {
-    position: relative;
-    min-height: 100vh;
+    min-height: 120vh;
     width: auto;
     overflow: hidden;
+    text-align: center;
 }
 
 .mediaOverlay {
@@ -148,6 +174,8 @@ iframe {
     right: 0;
     bottom: 0;
     left: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -166,6 +194,8 @@ iframe {
     position: fixed;
     top: 50px;
     z-index: 1;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
     transition: all 0.1s;
 }
 
@@ -192,8 +222,14 @@ iframe {
     width: 40px;
     height: 80px;
     border-bottom: 5px solid #040707;
+    -webkit-transition: width 0.2s ease-in;
+    -o-transition: width 0.2s ease-in;
     transition: width 0.2s ease-in;
+    -webkit-transition: height 0.2s ease-in;
+    -o-transition: height 0.2s ease-in;
     transition: height 0.2s ease-in;
+    -webkit-transition: opactiy 0.2s ease-in;
+    -o-transition: opactiy 0.2s ease-in;
     transition: opactiy 0.2s ease-in;
 }
 
@@ -206,6 +242,8 @@ iframe {
     width: 100px;
     height: 100px;
     text-align: center;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
@@ -222,7 +260,9 @@ iframe {
 }
 
 .navCircleScaleDown {
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
 }
 
 .navCircleLeft {
@@ -315,19 +355,22 @@ iframe {
     vertical-align: top;
     padding: 10px;
     padding-top: 20px;
-    border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     text-align: right;
 }
 
 .tab p {
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     color: white;
 }
 
 .indexMenu ol {
     list-style: none;
     counter-reset: li;
+    text-align: left;
+    
 }
 
 .indexMenu ol li:before {
@@ -339,9 +382,14 @@ iframe {
     margin-left: -1em;
 }
 
-.indexMenu ol li  {
-    border-bottom: 2px solid #040707;
+.indexMenu li a {
+    color: white;
 }
+
+.indexMenu li a:hover {
+     color: #AFADAE;
+}
+
 
 @media screen and (max-width: 460px) {
     .indexMenu ol li {
@@ -431,6 +479,15 @@ form textarea {
     height: 200px;
 }
 
+label {
+     color: #AFADAE;
+    font-size: 1rem;
+}
+
+.required {
+    color: #A71E24;
+}
+
 /*Banner styling */
 /*---------------------------------------------*/
 
@@ -479,7 +536,8 @@ form textarea {
 .grid-img {
     height: 300px; 
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .mediaImgOverlay {
@@ -497,23 +555,25 @@ form textarea {
 
 
 .fullHeaderContainer {
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     z-index: -4;
 }
 
 .fullHeaderImg {
-    position: absolute;
-    top: 0;
     min-height: 120vh;
     min-width: 100%;
 }
 
 .fullHeaderImgOverlayContainer {
-    position: relative;
+/*    position: relative;*/
     text-align: center;
     min-height: 120vh;
+    width: 100%;
+    z-index: -3;
 }
 
 .vertCenter {
@@ -531,6 +591,8 @@ form textarea {
 }
 
 .centerHeaderLogo {
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
@@ -599,6 +661,8 @@ form textarea {
     .ownerLeft, 
     .ownerRight {
         opacity: 0;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
         transition: all 0.2s;
     }
     .crewRow {
@@ -628,7 +692,7 @@ form textarea {
 }
 
 .serviceGraphicContainer p {
-    margin-top: -100px;
+    margin-top: 0;
     color: white;
 }
 
@@ -649,9 +713,26 @@ form textarea {
     }
 }
 /*Service table styling */
+.serviceDetails {
+    max-height: 1000px;
+    transition: 0.2s;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.serviceDetails.hidden {
+    max-height: 0;
+    padding: 0;
+}
+
 .serviceTable {
-    margin-top: 20vh;
+    margin-top: 15vh;
     padding-right: 50px;
+}
+
+#serviceTable {
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -666,22 +747,43 @@ form textarea {
     }
 }
 
-.serviceTable thead {
+.serviceTable h4 {
     background-color: #A71E24;
+    padding: 30px;
+    margin-bottom: 15px;
+    border-bottom: 10px solid #040707;
 }
 
-.serviceTable thead th {
-    text-align: center;  
-    color: white;
+.serviceTable dl {
+    text-align: left;  
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 0;
 }
 
-.serviceTable tbody tr:nth-child(even) {
+.serviceTable dl:nth-child(even) {
     background-color:  #aeadae;
 }
 
-.serviceTable tbody tr:nth-child(odd) {
+.serviceTable dl:nth-child(even) a {
+    color: black;
+}
+
+.serviceTable dl:nth-child(even) a:hover {
+    color: white;
+}
+
+.serviceTable dl:nth-child(odd) {
     background-color:  #464647;
     color: white;
+}
+
+.serviceTable dd {
+    width: 100%;
+}
+
+.moreInfo {
+    font-size: 0.8rem;
+    float: right;
 }
 
 #canvas {
@@ -723,9 +825,10 @@ form textarea {
 
 #videoStyle {
     position: absolute;
-/*    top: 50%;*/
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     min-width: 100%;
     min-height: 120vh;
     width: auto;
@@ -770,6 +873,7 @@ form textarea {
 
 .brandRow {
     position: relative;
+    background-color: white;
     padding: 0;
     text-align: center;
     color: #AFADAE;
@@ -874,6 +978,7 @@ form textarea {
 
 /*Footer Styling */
 /*---------------------------------------------*/
+
 #map {
     height: 400px;
     width: 100%;

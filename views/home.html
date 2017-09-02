@@ -2,6 +2,7 @@
     <div class="columns large-12 small-12 fullHeaderContainer">
         <video class="fullHeaderImg cover" id="videoStyle" autoplay="true" muted poster="images/introFrame.jpg">
             <source ng-src="{{homeData.videoBG}}" type="video/mp4">
+            <img src="images/introFrame.jpg" title="Your browser does not support video">
         </video>
     </div>
     
@@ -31,8 +32,11 @@
 <div class="row expanded aboutInfo">
     <div class="columns small-12 large-12">
         <div id="animatedLogoContainer" class="centerFlex">
-            <div id="animatedLogoBubble" class="centerFlex">
-                <iframe id="animatedRedlineLogo" data-src="animated_logo.html"></iframe>
+            <div ng-if="windowWidth > 460" id="animatedLogoBubble" class="centerFlex">
+                <iframe id="animatedRedlineLogo" on-screen data-src="animated_logo.html"></iframe>
+            </div>
+            <div ng-if="windowWidth < 460" id="animatedLogoBubble" class="centerFlex">
+                <img width="90%" src="images/Logo-official-small.png" alt="Redline motorcycles logo">
             </div>
         </div>
         <div class="row column expanded" id="homeData">

@@ -7,6 +7,7 @@ app.controller("ServiceController", ["$scope", "information", "$window", "$compi
                                      
     information.then(function(data) {
         $scope.logo = data.logo;
+        $scope.logoLight = data.logoLight;
         $scope.serviceData = data.service;
         $scope.cards = $scope.serviceData.cards;
         $scope.serviceCat = $scope.serviceData.serviceCat;

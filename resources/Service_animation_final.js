@@ -73,7 +73,7 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 (lib.vmax = function() {
 	this.initialize(img.vmax);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,775,434);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,817,470);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -671,39 +671,39 @@ p.nominalBounds = new cjs.Rectangle(-95.5,-129.4,544.6,631.9);
 	// Layer 1
 	this.rwSelector = new lib.fullSelector();
 	this.rwSelector.parent = this;
-	this.rwSelector.setTransform(172.2,325,0.406,0.406,-140.2,0,0,159.5,187.6);
+	this.rwSelector.setTransform(123.2,343.5,0.406,0.406,-140.2,0,0,159.5,187.6);
 
 	this.fwSelector = new lib.fullSelector();
 	this.fwSelector.parent = this;
-	this.fwSelector.setTransform(742.6,324.9,0.406,0.406,-59,0,0,159.7,187.6);
+	this.fwSelector.setTransform(812.6,341.9,0.406,0.406,-59,0,0,159.7,187.6);
 
 	this.engineSelector = new lib.fullSelector();
 	this.engineSelector.parent = this;
-	this.engineSelector.setTransform(496,273.4,0.332,0.332,-119,0,0,159.7,187.3);
+	this.engineSelector.setTransform(538,289.4,0.332,0.332,-119,0,0,159.7,187.3);
 
 	this.exhaustSelector = new lib.fullSelector();
 	this.exhaustSelector.parent = this;
-	this.exhaustSelector.setTransform(351.1,328.8,0.303,0.303,-14,0,0,160,187.4);
+	this.exhaustSelector.setTransform(334.2,359.8,0.368,0.368,-14,0,0,160,187.7);
 
 	this.controlSelector = new lib.fullSelector();
 	this.controlSelector.parent = this;
-	this.controlSelector.setTransform(584.4,67.9,0.237,0.237,31,0,0,159.8,187.1);
+	this.controlSelector.setTransform(642.9,63.7,0.422,0.422,31,0,0,160.1,186.8);
 
 	this.tankSelector = new lib.fullSelector();
 	this.tankSelector.parent = this;
-	this.tankSelector.setTransform(488.7,132.7,0.246,0.246,112.5,0,0,159.4,186.8);
+	this.tankSelector.setTransform(465.5,108.6,0.401,0.401,112.5,0,0,159.6,186.6);
 
 	this.seatSelector = new lib.fullSelector();
 	this.seatSelector.parent = this;
-	this.seatSelector.setTransform(286,198.5,0.238,0.238,-157.5);
+	this.seatSelector.setTransform(240.9,145.4,0.403,0.403,-157.5,0,0,134.1,149);
 
 	this.instance = new lib.vmax();
 	this.instance.parent = this;
-	this.instance.setTransform(63.6,0.7);
+	this.instance.setTransform(-38,-54,1.219,1.219);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.seatSelector},{t:this.tankSelector},{t:this.controlSelector},{t:this.exhaustSelector},{t:this.engineSelector},{t:this.fwSelector},{t:this.rwSelector}]}).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.vmaxClip, new cjs.Rectangle(-0.5,-8.8,913.1,478.5), null);
+}).prototype = getMCSymbolPrototype(lib.vmaxClip, new cjs.Rectangle(-49.5,-72.8,1032.1,591.9), null);
 
 
 // stage content:
@@ -746,7 +746,7 @@ p.nominalBounds = new cjs.Rectangle(-95.5,-129.4,544.6,631.9);
 	this.timeline.addTween(cjs.Tween.get(this.main).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(543.4,346.2,913.1,478.6);
+p.nominalBounds = new cjs.Rectangle(494.4,282.3,1032.1,592);
 // library properties:
 lib.properties = {
 	id: '5564E5B3BDD3E74B9D8A0E6AB7166CC5',

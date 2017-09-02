@@ -82,10 +82,9 @@ $(function() {
 
 //home "onLoad" calls
 function homeOnLoad() {
-    parallax($(".fullHeaderContainer"), 2);
-    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
-    animatedRedlineLogo();
-    
+    parallax($(".fullHeaderContainer"), -2);
+//    parallax($(".fullHeaderImgOverlayContainer"), -3);
+//    animatedRedlineLogo();
     $(function() {
         $("#bikeSlider").slick({
             centerMode: true,
@@ -118,13 +117,13 @@ function homeOnLoad() {
 }
 
 function mediaOnLoad() {
-    parallax($(".fullHeaderImg"), 2);
-    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+    parallax($(".fullHeaderImg"), -2);
+//    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
 }
 
 function serviceOnLoad() {
-    parallax($(".fullHeaderImg"), 2);
-    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+    parallax($(".fullHeaderContainer"), -2);
+//    parallax($(".fullHeaderImgOverlayContainer"), -3); 
     
     function clickOpen() {
         $("#indexContainer").addClass("active").animate({
@@ -159,10 +158,10 @@ function serviceOnLoad() {
 }
 
 function teamOnLoad() {
-    parallax($(".fullHeaderImg"), 1.7);
-    parallax($(".fullHeaderImgOverlayContainer"), 1.3);
-    parallax($(".ownerRight"), 4);
-    parallax($(".ownerLeft"), 4);
+    parallax($(".fullHeaderImg"), -2);
+//    parallax($(".fullHeaderImgOverlayContainer"), -1.3);
+//    parallax($(".ownerRight"), -4);
+//    parallax($(".ownerLeft"), -4);
 }
 
 
@@ -179,49 +178,20 @@ function animatedRedlineLogo() {
 // Parallax coding
 // called in controllers since it needs to be called when views are loaded
 function parallax(element, intensity) {
-    $(window).scroll(function() {
-        var scrollTop = $(window).scrollTop();
-        var pos = scrollTop / intensity + "px";
-        element.css("transform", "translateY(" + pos +")");
-    })
+    if($(window).width() > 460) {
+        console.log($(window).width())
+        $(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var pos = Math.round(scrollTop / intensity) + "px";
+            element.css("transform", "translate3d(0," + pos +",0)");
+        })
+    } else {
+        console.log($(window).width())
+        console.log("scroll cancelled")
+    }
 }
 
-// viewport function 
-$.fn.isOnScreen = function() {
-    
-    var win = $(window);
-    
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-    
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-    
-    return (!(viewport.right < bounds.left ||
-              viewport.left > bounds.right ||
-              viewport.bottom < bounds.top ||
-              viewport.top > bounds.bottom));
-}
 
-// function to see if an element has appeared on screen before
-$.fn.scrollInViewOnce = function(callback) {
-    var fired = 0;
-    $(this).scroll(function(){
-        if(fired == 0) {
-            var self = this, $this = $(self);
-            if ($this.data('scrollTimeout')) {
-              clearTimeout($this.data('scrollTimeout'));
-            }
-            $this.data('scrollTimeout', setTimeout(callback,150,self));
-            fired = 1;
-        };
-    });
-}
 
 // same function as above without the counter
 // this will launch a function once scrolling stops with a delay
@@ -232,6 +202,45 @@ $.fn.scrollEnd = function(callback, timeout) {
           clearTimeout($this.data('scrollTimeout'));
         }
         $this.data('scrollTimeout', setTimeout(callback, timeout));
+    });
+}
+
+// viewport function 
+$.fn.isOnScreen = function() {
+
+    var win = $(window);
+
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left ||
+              viewport.left > bounds.right ||
+              viewport.bottom < bounds.top ||
+              viewport.top > bounds.bottom));
+}
+
+ // function to see if an element has appeared on screen before
+$.fn.scrollInViewOnce = function(callback) {
+    var fired = 0;
+    $(this).on("scroll", function scrollInViewOnce(){
+        if(fired == 0) {
+            var self = this, $this = $(self);
+            if ($this.data('scrollTimeout')) {
+              clearTimeout($this.data('scrollTimeout'));
+            }
+            $this.data('scrollTimeout', setTimeout(callback,250,self));
+            fired = 1;
+        } else {
+            $(window).off("scroll", scrollInViewOnce);   
+        };
     });
 }
 

@@ -65,7 +65,7 @@ app.directive("navAction", ["$window", function($window) {
             }
             
             function mobileClose() {
-                $(".redBar").addClass("navCircleLeft");
+                $(".redBar").css("width", "5px");
                 navClose();
             }
             
