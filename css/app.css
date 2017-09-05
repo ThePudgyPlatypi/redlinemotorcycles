@@ -169,7 +169,7 @@ iframe {
 
 .mediaOverlay {
     position: absolute;
-    opacity: 0.6;
+/*    opacity: 0.6;*/
     top: 0;
     right: 0;
     bottom: 0;
@@ -486,6 +486,12 @@ label {
 
 .required {
     color: #A71E24;
+    font-size: 1.5em;
+}
+
+.valid {
+    display: block;
+    padding-bottom: 20px;
 }
 
 /*Banner styling */
@@ -974,7 +980,18 @@ label {
 /*Experience Service Styling */
 /*---------------------------------------------*/
 
+#lyftRow {
+/*    padding-bottom: 40px;*/
+}
 
+#lyft_frame {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 40px;
+    margin-bottom: -40px;
+/*    transition: 0.2s;*/
+}
 
 /*Footer Styling */
 /*---------------------------------------------*/

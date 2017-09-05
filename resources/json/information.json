@@ -12,7 +12,11 @@
     "home" : {
         "name" : "home",
         "headerBG" : "images/wallpaper.jpg",
-        "videoBG" : "videos/compressedFinal.mp4",
+        "videoBG" : {
+            "mp4" : "videos/compressedFinal720.mp4",
+            "ogg" : "videos/compressedFinal720.ogg",
+            "webm" : "videos/compressedFinal720_webm.mkv"
+        },
         "about" : "Here at Redline Motorcycles we excel at getting your Motorcycle, Dirt Bike, ATV, or UTV back up and running. With more than 35 years of combine service experience, Patrick and Daniel Doyle have all the knowledge and expertise to give you piece of mind. Quality work is what we strive for here at Redline Motorcycles so call us today at (609) 207-9572, or use the contact form below, to schedule service. If you receive our voicemail then please leave your name, contact phone number, an appropriate time to reach you, explain what vehicle you have, what the problem is, and we will return your call as soon as we can.",
         "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
         "brandHeaderBG" : "images/Motorcycle-RideBlur.jpg",

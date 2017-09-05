@@ -2,7 +2,7 @@
     <div class="column grid-col" ng-repeat="image in info">
         <a lightbox ng-href="{{image.images.standard_resolution.url}}">
             <img class="grid-img" ng-src="{{image.images.low_resolution.url}}" alt="{{image.caption.text}}">
-<!--            <div class="mediaOverlay" ng-style="{'background-color' : color()}"></div>-->
+            <div class="mediaOverlay"></div>
         </a>
     </div>
 </div>

@@ -1,7 +1,9 @@
 <div class="row expanded parallaxRow" id="home">
     <div class="columns large-12 small-12 fullHeaderContainer">
         <video class="fullHeaderImg cover" id="videoStyle" autoplay="true" muted poster="images/introFrame.jpg">
-            <source ng-src="{{homeData.videoBG}}" type="video/mp4">
+            <source ng-src="{{homeData.videoBG.mp4}}" type="video/mp4">
+            <source ng-src="{{homeData.videoBG.ogg}}" type="video/ogg">
+            <source ng-src="{{homeData.videoBg.webm}}" type="video/webm">
             <img src="images/introFrame.jpg" title="Your browser does not support video">
         </video>
     </div>
@@ -76,5 +78,3 @@
 <!--        Brand Slider-->
         
 </div>
-
-<exp-services info=""></exp-services>

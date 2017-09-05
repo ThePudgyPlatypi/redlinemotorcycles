@@ -1,31 +1,14 @@
-app.directive("colorChange", function() {
-    return {
-        restrict: "EA",
-        link: function(scope, element, attr) {
-            var colors = [
-                "rgba(24, 24, 24, 0.6)",
-                "rgba(174, 173, 174, 0.6)",
-                "rgba(167, 30, 34, 0.6)",
-                "rgba(70, 70, 71, 0.6)"];
-            var colorPicked;
-            
-            var init = function() {
-                var random = Math.floor(Math.random() * (3 - 0)) + 0;
-                colorPicked = colors[random];
-                elem.css("background-color", colorPicked);
-                return colorPicked
-            }
-            
-            scope.$watch(
-                function() {
-                    return colorPicked;
-                },
-                function() {
-                    init();
-                }
-            );
-            
-            scope.$digest();
+app.directive("colorChange", ["$timeout", function($timeout) {
+    var def = {
+        restrict: "A",
+        terminal: true,
+        transclude: false,
+        link: function(scope, elem, attrs) {
+            $timeout(scope.$eval(attrs.colorChange), 0);
         }
-    }
-})
+    };
+    
+    return def;
+    
+    //this is all so that it does this after the directive is rendered. Not sure exactly how this all works yet since I dunno enough about angular. Fiddle is here: https://jsfiddle.net/gsferreira/h53okjtu/
+}]);

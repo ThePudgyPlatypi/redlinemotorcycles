@@ -724,7 +724,10 @@ p.nominalBounds = new cjs.Rectangle(-95.5,-129.4,544.6,631.9);
             
         var selector = function(x) {
 //            console.log(x);
-            parent.postMessage(x, "http://localhost:3000");
+            parent.postMessage(x, "http://www.redlinemotorcycles.co/");
+            parent.postMessage(x, "http://www.redlinemotorcyclesnj.com/");
+            parent.postMessage(x, "http://redlinemotorcycles.co/");
+            parent.postMessage(x, "http://redlinemotorcyclesnj.com/");
         };
         
         for(var i = 1; i < selectors.length; i++) {

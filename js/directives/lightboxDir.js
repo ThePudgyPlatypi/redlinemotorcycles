@@ -6,8 +6,6 @@ app.directive("lightbox", function() {
         restrict: "A",
         link: function(scope,elem,attrs) {
             $(elem).click(function(e) {
-                console.log(alt_src);
-                console.log(alt);
                 e.preventDefault();
                 var image_src =  $(this).attr("href");
                 var alt_src =  $(this).children();
@@ -27,7 +25,6 @@ app.directive("lightbox", function() {
                                     '<img src="' + image_src +'" />' +
                                 '</div>' +
                             '</div>' +
-                            '<p>' + alt + '</p>' +
                         '</div>';
                     $("body").append(lightbox);
                 }

@@ -3,7 +3,6 @@ var app = angular.module("main", ["ngRoute"]);
 var token = "4033162559.73c7dce.c39e3a13d1284ecdb809ea6322a0718e";
 var count = 15;
 var instaUrl = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=" + count;
-var colors = ["#181818", "#aeadae", "#a71e22", "#464647"];
 
 app.config(function($routeProvider, $sceDelegateProvider) {
     $routeProvider.when("/", {
@@ -73,8 +72,7 @@ $(document).foundation();
     
     
 // jQuery 
-$(function() {
-});
+$(function() {});
 
 
 //--------------------------------------------------
@@ -117,8 +115,8 @@ function homeOnLoad() {
 }
 
 function mediaOnLoad() {
-    parallax($(".fullHeaderImg"), -2);
-//    parallax($(".fullHeaderImgOverlayContainer"), 1.5);
+    parallax($(".fullHeaderImg"), -2);   
+//    console.log(mediaOverlay);
 }
 
 function serviceOnLoad() {
@@ -159,7 +157,7 @@ function serviceOnLoad() {
 
 function teamOnLoad() {
     parallax($(".fullHeaderImg"), -2);
-//    parallax($(".fullHeaderImgOverlayContainer"), -1.3);
+    parallax($(".fullHeaderImgOverlayContainer"), 1.8);
 //    parallax($(".ownerRight"), -4);
 //    parallax($(".ownerLeft"), -4);
 }

@@ -1,9 +1,8 @@
-<!--issue #1 contact form does not submit to anything.-->
+
 <!--issue #2 Lightbox has some concerns-->
-<!--issue #3 Lyft is not integrated yet -->
-<!--issue #4 media overlay still does not work -->
+
 <!--issue #5 need all the content (video, biographies, images of everyone, all the service content)-->
-<!--issue #6 need to figure out why the darn google maps doesnt always load -->
+
 
 <!doctype html>
 <html lang="en" ng-app="main">
@@ -26,9 +25,6 @@
         
         <script src="js/vendor/angular.min.js"></script>
         <script src="js/vendor/angular-route.min.js"></script>
-<!--        <script src="js/vendor/api-check.min.js"></script>-->
-<!--        -->
-<!--        <script src="js/vendor/formly.min.js"></script>-->
         <script src="js/vendor/jquery-3.2.1.min.js"></script>
         <script src="js/vendor/jquery-ui.min.js"></script>
         <script src="js/Service_animation_final.js"></script>
@@ -48,6 +44,10 @@
             </div>
 <!--main view-->
             <div ng-view autoscroll="true"></div>
+            
+            <div ng-controller="HomeController">
+                <exp-services info="showIframe"></exp-services>
+            </div>
             
             <div class="contactForm darkGreyBG lightText" id="contact" >
                 <div class="row expanded">
@@ -101,7 +101,11 @@
                             <div class="row column small-12 ">
                                 <label for="message">Message<span class="required"> *</span></label>
                                     <textarea ng-model="contact.message" type="text" class="form-textarea" id="message" name="message" placeholder="What can we help you with?" cols="30" rows="5" required></textarea>
-
+                                    
+                                <span class="valid" ng-if="contactForm.$invalid">{{ formMessage.invalid }}</span>
+                                <span class="valid" ng-if="contactForm.$valid">{{ formMessage.valid }}</span>
+                                <span class="valid" ng-if="contactForm.$submitted">{{ formMessage.submitted }}</span>
+                                
                                 <button class="btn" ng-disabled="contactForm.$invalid" type="submit" value="Submit">Submit</button>
                             </div>
 
@@ -112,7 +116,7 @@
             </div>
 <!--media-->
             <div ng-controller="MediaController">
-                <media ng-if="windowWidth > 768" info="images" color="randomColor"></media>
+                <media ng-if="windowWidth > 768" info="images" color="" color-change="mediaOverlay"></media>
             </div>
 <!--footer-->
             <div ng-controller="HomeController">
@@ -135,21 +139,18 @@
         <script src="js/directives/cardDir.js"></script>
         <script src="js/directives/expServicesDir.js"></script>
         <script src="js/directives/footerDir.js"></script>
-        <script src="js/directives/fullHeaderDir.js"></script>
-        <script src="js/directives/halfHeaderDir.js"></script>
         <script src="js/directives/mediaDir.js"></script>
         <script src="js/directives/navigationDir.js"></script>
         <script src="js/directives/lightboxDir.js"></script>
         <script src="js/directives/navActionDir.js"></script>
         <script src="js/directives/formDir.js"></script>
         <script src="js/directives/onScreenDir.js"></script>
+        <script src="js/directives/colorChangeDir.js"></script>
         
         <!-- services -->
         <script src="js/services/navigationSer.js"></script>
         <script src="js/services/informationSer.js"></script>
         <script src="js/services/instagramSer.js"></script>
-        <script src="js/services/facebookSer.js"></script>
-        
         
     </body>
 </html>

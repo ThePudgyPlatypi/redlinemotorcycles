@@ -24,4 +24,10 @@ app.controller("HomeController", ["$scope", "navLinks", "information", "instagra
     
     $scope.$on("$viewContentLoaded", homeOnLoad());
     
+    
+    $scope.showIframe = function() {
+        $("#lyft_frame").animate({
+            height: "550px"
+        }, 700);
+    }
 }]);    
