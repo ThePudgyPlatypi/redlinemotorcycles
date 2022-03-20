@@ -154,21 +154,21 @@
                 "image" : "images/OilSpecial.svg",
                 "imagePNG" : "images/OilSpecial.png",
                 "nameProduct" : "Oil Change Special",
-                "titlePrice" : "$119.99*",
+                "titlePrice" : "Call for Price",
                 "bioDesc" : "The Oil Change Special is the final word in motorcycle oil changes. With this service, we change the oil and filter, check and set the tire pressures in both tires, lube and adjust chain (if applicable), adjust drive belt (if applicable), change final drive oil (if applicable), clean and tighten battery terminals, check and adjust controls, check and top off all fluids, check all lights for proper operation, and finally inspect brakes and tires for excessive wear! *phew* That's a lot! *price can vary"
             },
             {
                 "image" : "images/service.svg",
                 "imagePNG" : "images/service.png",
                 "nameProduct" : "Service Diagnosis",
-                "titlePrice" : "$119.99*",
+                "titlePrice" : "Call for Price*",
                 "bioDesc" : "If your bike, or quad, is making a weird noise, has some strange behavior, or just isn't running right then bring it to us so that we can figure out exactly what is wrong with your vehicle. If we can fix your bike in the time allotted time then all is well, but if it’s something more involved, or requires the ordering of replacement parts then we will talk with you, and discuss your options. *price can vary"
             },
             {
                 "image" : "images/WheelChange.svg",
                 "imagePNG" : "images/WheelChange.png",
                 "nameProduct" : "Tire Change",
-                "titlePrice" : "$29.99 - $119.99",
+                "titlePrice" : "Call for Price",
                 "bioDesc" : "Tire change price varies depending on a few things 1) Do you already have a tire, or are we getting it for you? 2) Are you going to bring the whole bike in, or just bring us the wheel? 3) What kind of bike do you own? Sport bikes are typically the cheapest to change, and full dresser touring bikes the most expensive. Drop us a line, or contact us thru the contact form, and we can talk to you about the options and let you know how much it will be for your application."
             },
             {
@@ -182,14 +182,14 @@
                 "image" : "images/brakes.svg",
                 "imagePNG" : "images/brakes.png",
                 "nameProduct" : "Brake Pads",
-                "titlePrice" : "$59.99 & up",
+                "titlePrice" : "Call for Price",
                 "bioDesc" : "Brakes are arguably the most important thing on your bike! You might have all the horsepower in the world, but if you can only enjoy it once before you meet the end of the road then there is little point. Keep your brakes in good working order with frequent pad changes and rotor inspections. Price can vary depending on your application, and what kind of pads you want so please contact us either by phone, or with the contact form to get a more accurate quote."
             },
             {
                 "image" : "images/helmet.svg",
                 "imagePNG" : "images/helmet.png",
                 "nameProduct" : "Safety Check",
-                "titlePrice" : "$99.99",
+                "titlePrice" : "Call for Price",
                 "bioDesc" : "Safety is the most important thing when riding a motorcycle. The freedom and open road are wonderful, but being able to reach your destination in one piece is just as wonderful. If you have any doubts about whether your ride is in tip top condition then bring it up to us. We check all your fluids, and top them off if need be, we check all your lights, we check your chain/belt/final drive to make sure everything is in safe working order, we check all your controls, make sure the wheels, tires, and brakes are up to snuff, set your tire pressures, and give your bike a once over for any other audible or visual clues that might hint to larger problems."
             },
             {
@@ -203,7 +203,7 @@
                 "image" : "images/helmet.svg",
                 "imagePNG" : "images/helmet.png",
                 "nameProduct" : "Crash Work",
-                "titlePrice" : "$89.99 pr/hr",
+                "titlePrice" : "Call for Price",
                 "bioDesc" : "Unfortunately, no matter how safe you ride, accidents do happen. We can help you get your bike back together, working closely with your insurance provider to make it a seamless experience for you to get your bike back in one piece." 
             }
         ],
