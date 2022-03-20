@@ -2,7 +2,8 @@ app.directive("expServices", function() {
     return {
         restrict: "E",
         scope: {
-            info: "="
+            info: "=",
+            responsive: "="
         },
         templateUrl: "views/partials/_expServices.html"
     }

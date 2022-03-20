@@ -34,7 +34,7 @@
             </div>
             <div class="column small-12 small-centered">
                 <address>
-                    1628 Route 206 Ste C<br>
+                    1628 Route 206<br>
                     Tabernacle, NJ 08088
                 </address>
             </div>
@@ -59,15 +59,17 @@
     <div class="column large-6 small-12" ng-repeat="owner in owners">
         <div class="row expanded" ng-if="$index < 1">
             <div class="column large-4 small-12" >
-                <img ng-if="windowWidth < 460" class="ownerImage" ng-src="{{owner.imageMobile}}">
-                <img ng-if="windowWidth > 460" ng-src="{{owner.image}}">
+                <div class="centerDiv" ng-if="windowWidth < 1024">
+                    <img class="ownerImage" ng-src="{{owner.imageMobile}}">
+                </div>
+                <img ng-if="windowWidth > 1024" ng-src="{{owner.image}}">
             </div>
             <div class="column large-8 small-12">
                 <h3 class="wrap">{{ owner.name }}</h3>
                 <p class="wrap">{{owner.bio}}</p>
             </div>
         </div>
-        <div class="row expanded" ng-if="$index >= 1 && windowWidth > 460">
+        <div class="row expanded" ng-if="$index >= 1 && windowWidth > 1024">
             <div class="column large-8 small-12 small-push-12">
                 <h3 class="wrapRight">{{ owner.name }}</h3>
                 <p class="wrapRight">{{owner.bio}}</p>
@@ -77,8 +79,8 @@
             </div>
         </div>
         
-        <div class="row expanded" ng-if="$index >= 1 && windowWidth <= 460">
-            <div class="column large-4 small-12 small-pull-12">
+        <div class="row expanded" ng-if="$index >= 1 && windowWidth <= 1024">
+            <div class="column large-4 small-12 small-pull-12 centerDiv">
                 <img class="ownerImage" ng-src="{{owner.imageMobile}}">
             </div>
             <div class="column large-8 small-12 small-push-12">

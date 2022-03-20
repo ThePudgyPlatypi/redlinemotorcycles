@@ -72,7 +72,7 @@ $(document).foundation();
     
     
 // jQuery 
-$(function() {});
+// $(function() {});
 
 
 //--------------------------------------------------
@@ -120,7 +120,7 @@ function mediaOnLoad() {
 }
 
 function serviceOnLoad() {
-    parallax($(".fullHeaderContainer"), -2);
+    // parallax($(".fullHeaderContainer"), -2);
 //    parallax($(".fullHeaderImgOverlayContainer"), -3); 
     
     function clickOpen() {
@@ -177,15 +177,15 @@ function animatedRedlineLogo() {
 // called in controllers since it needs to be called when views are loaded
 function parallax(element, intensity) {
     if($(window).width() > 460) {
-        console.log($(window).width())
+        // console.log($(window).width())
         $(window).scroll(function() {
             var scrollTop = $(window).scrollTop();
             var pos = Math.round(scrollTop / intensity) + "px";
             element.css("transform", "translate3d(0," + pos +",0)");
         })
     } else {
-        console.log($(window).width())
-        console.log("scroll cancelled")
+        // console.log($(window).width())
+        // console.log("scroll cancelled")
     }
 }
 

@@ -1,16 +1,26 @@
-
-<!--issue #2 Lightbox has some concerns-->
-
-<!--issue #5 need all the content (video, biographies, images of everyone, all the service content)-->
-
-
 <!doctype html>
 <html lang="en" ng-app="main">
     <head>
         <meta charset="utf-8">
+        <meta name="google-site-verification" content="O_3rb8E3XzLa8kAwIE0t85RIuPJCNPBD-wEjqO5qLQ0" />
+        <meta name="google-site-verification" content="XVgmZ3YsBvEuFUY15cNppLR8nVmZSPWR4SwPCCchUGk" />
+        <meta name="google-site-verification" content="9ZQwhToGqtTcEuqoXMlR0CwMe2SYGXDasPPqNhmqpe8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Redline Motorcycles is a premiere motorcycle and powersports repair facility currently located in Tabernacle, NJ just a mile from the red lion circle. ">
+        <meta name="keywords" content="Motorcycles, ATV, All Terrain Vehicles, UTV, auto repair, motorcycle repair, powersports, powersports repair, service, motorcycle service, redline motorcycles, pat doyle, dan doyle">
+        <meta name="author" content="Chris Stehm">
+
         <title>Redline Motorcycles</title>
+
+        <meta property="og:url" content="http://www.redlinemotorcyclesnj.com">
+        <meta property="og:description" content="Redline Motorcycles is a premiere motorcycle and powersports repair facility currently located in Tabernacle, NJ just a mile from the red lion circle.">
+        <meta property="og:image" content="http://www.redlinemotorcyclesnj.com/images/Logo-official-small.png">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Redline Motorcycles">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" href="images/favicon.ico">
         
         <!-- stylesheets -->
         <link rel="stylesheet" href="css/foundation.css">
@@ -20,19 +30,9 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
-              
-        <!-- vendors -->
-        
-        <script src="js/vendor/angular.min.js"></script>
-        <script src="js/vendor/angular-route.min.js"></script>
-        <script src="js/vendor/jquery-3.2.1.min.js"></script>
-        <script src="js/vendor/jquery-ui.min.js"></script>
-        <script src="js/Service_animation_final.js"></script>
-        <script src="js/vendor/createjs.min.js"></script>
-        <script src="js/vendor/foundation.min.js"></script>
-        <script src="js/vendor/jquery.easing.js"></script>
-        <script src="js/Service_animation_final.js"></script>
-        <script src="js/vendor/slick.min.js"></script>
+
+        <!-- reCaptcha API -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>    
     </head>
     
     <body>
@@ -46,12 +46,12 @@
             <div ng-view autoscroll="true"></div>
             
             <div ng-controller="HomeController">
-                <exp-services info="showIframe"></exp-services>
+                <exp-services info="showIframe" responsive="windowWidth"></exp-services>
             </div>
             
             <div class="contactForm darkGreyBG lightText" id="contact" >
                 <div class="row expanded">
-                    <div class="column small-12">
+                    <div class="column small-12" id="contactPara">
                         <h2>Contact</h2>
                         <h3>
                             <a href="tel:6092079572">(609) 207-9572</a>
@@ -61,7 +61,7 @@
                     <div class="column small-12">
 
                         <form ng-controller="FormController" name="contactForm" method="post" ng-submit="contactForm.$valid && handleFormSubmit(contact)" novalidate>
-
+                            
                             <div class="row gutter-small">
                                 <div class="column small-6">
                                     <label for="firstName">First Name<span class="required"> *</span></label>
@@ -106,6 +106,10 @@
                                 <span class="valid" ng-if="contactForm.$valid">{{ formMessage.valid }}</span>
                                 <span class="valid" ng-if="contactForm.$submitted">{{ formMessage.submitted }}</span>
                                 
+                                <div class="reCaptcha-container">
+                                    <div ng-model="contact.recaptcha" class="g-recaptcha" data-sitekey="6LccjnwUAAAAALjf04XulXl-nDwW_Ob0p-KTIRB0"></div>
+                                </div>
+
                                 <button class="btn" ng-disabled="contactForm.$invalid" type="submit" value="Submit">Submit</button>
                             </div>
 
@@ -116,14 +120,25 @@
             </div>
 <!--media-->
             <div ng-controller="MediaController">
-                <media ng-if="windowWidth > 768" info="images" color="" color-change="mediaOverlay"></media>
+                <media ng-if="windowWidth > 768" info="images"></media>
             </div>
 <!--footer-->
             <div ng-controller="HomeController">
-                <footer-view info="footerData" links="mobileLinks" address="address"></footer-view>
+                <footer-view info="footerData" links="mobileLinks" address="address" hours="hoursLong"></footer-view>
             </div>
             
         </div>
+        <!-- vendors -->
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/angular-route.min.js"></script>
+        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="js/vendor/jquery-ui.min.js"></script>
+        <script src="js/Service_animation_final.js"></script>
+        <script src="js/vendor/createjs.min.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script src="js/vendor/jquery.easing.js"></script>
+        <script src="js/vendor/slick.min.js"></script>
+        
         <!-- app -->
         <script src="js/app.js"></script>
 <!--        <script src="js/vendor/angular-formly-templates-bootstrap.min.js"></script>-->
@@ -151,6 +166,15 @@
         <script src="js/services/navigationSer.js"></script>
         <script src="js/services/informationSer.js"></script>
         <script src="js/services/instagramSer.js"></script>
-        
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85597475-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments)};
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-85597475-1');
+		</script>
     </body>
 </html>

@@ -17,6 +17,8 @@ app.controller("HomeController", ["$scope", "navLinks", "information", "instagra
         $scope.serviceData = data.service;
         $scope.teamData = data.team;
         $scope.address = data.address;
+        $scope.hoursLong = data.hoursLong;
+        $scope.hoursShort = data.hoursShort;
         $scope.footerData = data.footer;
         $scope.sliderBikes = $scope.homeData.bikes;
         $scope.sliderBrands = $scope.homeData.brands;
@@ -30,4 +32,5 @@ app.controller("HomeController", ["$scope", "navLinks", "information", "instagra
             height: "550px"
         }, 700);
     }
+    
 }]);    

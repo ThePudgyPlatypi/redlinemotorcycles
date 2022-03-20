@@ -29,6 +29,14 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.reCaptcha-container {
+    text-align: center;
+}
+
+.reCaptcha-container .g-recaptcha {
+    display: inline-block;
+}
+
 @media screen and (max-width: 460px) {
     
     html, body {
@@ -64,6 +72,8 @@ button.btn:hover {
 }
 
 button {
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -80,6 +90,10 @@ iframe {
 .cover {
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+.underline {
+    text-decoration-line: underline;
 }
 
 /*goes on the parent of what you want to center */
@@ -167,9 +181,20 @@ iframe {
     text-align: center;
 }
 
+.parallaxRow.smallPRow {
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 460px) {
+    .parallaxRow {
+        min-height: 100%;
+    }
+}
+
 .mediaOverlay {
     position: absolute;
-/*    opacity: 0.6;*/
+    opacity: 0.6;
+    background-color: #A71E24;
     top: 0;
     right: 0;
     bottom: 0;
@@ -188,6 +213,11 @@ iframe {
     display: block;
     text-align: center;
 }
+
+#contactPara {
+    padding-bottom: 35px;
+}
+
 /*Navigation styling*/
 /*---------------------------------------------*/
 .navContainer {
@@ -328,6 +358,11 @@ iframe {
 }
 
 /*Service Index styling */
+
+#serviceBG {
+    background-color: #464647;
+}
+
 #indexContainer {
     position: absolute;
     right: -45%;
@@ -412,6 +447,11 @@ iframe {
 .cardRow {
     padding: 50px;
     border-top: 40px solid #464647;
+}
+
+.cardRowLight {
+    padding: 50px;
+    border-top: 40px solid #AFADAE;
 }
 
 .cardImage {
@@ -583,7 +623,7 @@ label {
 }
 
 .vertCenter {
-    padding-top: 10%;
+    padding-top: 8%;
 }
 
 .vertCenter h2 {
@@ -721,6 +761,8 @@ label {
 /*Service table styling */
 .serviceDetails {
     max-height: 1000px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
     overflow: hidden;
     padding: 20px;
@@ -828,6 +870,12 @@ label {
 
 /*Home styling */
 /*---------------------------------------------*/
+
+.hoursShort {
+    color: white;
+    font-size: 1.2em;
+    padding-bottom: 12px;
+}
 
 #videoStyle {
     position: absolute;

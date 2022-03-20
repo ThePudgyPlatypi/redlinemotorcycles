@@ -8,8 +8,6 @@ app.directive("lightbox", function() {
             $(elem).click(function(e) {
                 e.preventDefault();
                 var image_src =  $(this).attr("href");
-                var alt_src =  $(this).children();
-                var alt = alt_src.attr("alt");
                 var childOverlay = $(this).children(".mediaOverlay").css("background-color");
                 if($("#lightbox").length > 0) {
                     $("#content").html('<img src="' + image_src + '"/>');

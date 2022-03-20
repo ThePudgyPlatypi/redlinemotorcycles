@@ -1,7 +1,7 @@
 <div class="row expanded large-up-5 medium-up-3 small-up-1">
     <div class="column grid-col" ng-repeat="image in info">
         <a lightbox ng-href="{{image.images.standard_resolution.url}}">
-            <img class="grid-img" ng-src="{{image.images.low_resolution.url}}" alt="{{image.caption.text}}">
+            <img class="grid-img" ng-src="{{image.images.standard_resolution.url}}" alt="{{image.caption.text}}">
             <div class="mediaOverlay"></div>
         </a>
     </div>

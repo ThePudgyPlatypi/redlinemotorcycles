@@ -10,9 +10,9 @@
 
         // EDIT THE 2 LINES BELOW AS REQUIRED
 
-        $email_to = "redlinemotorcycles@yahoo.com";
+        $email_to = "redlinemotorcyclesNJ@yahoo.com";
 
-        $email_subject = "Service Enquiry";
+        $email_subject = "Service Inquiry";
 
 
 
@@ -72,34 +72,18 @@
 
 
 
-    // create email headers
+        // create email headers
 
-    $headers = 'From: '.$email_from."\r\n".
+        $headers = 'From: '.$email_from."\r\n".
 
-    'Reply-To: '.$email_from."\r\n" .
+        'Reply-To: '.$email_from."\r\n" .
 
-    'X-Mailer: PHP/' . phpversion();
+        'X-Mailer: PHP/' . phpversion();
 
-    /*----
-    Un-comment to enable email sending
-    ----*/
-     mail($email_to, $email_subject, $email_message, $headers); 
-
-?>
-    {
-        <!-- console degugger check to see if the form submitted correctly -->
-        "success": true,
-    } 
-
-<?php
-
-    } else {
-?>   
-    {
-        "success": false
-    } 
-
-<?php
+        /*----
+        Un-comment to enable email sending
+        ----*/
+        mail($email_to, $email_subject, $email_message, $headers); 
     }
  
 ?>

@@ -1,0 +1,9 @@
+[22-Nov-2018 19:57:28 UTC] PHP Parse error:  syntax error, unexpected '$telephone' (T_VARIABLE) in /home/redline123/public_html/scripts/action.php on line 42
+[22-Nov-2018 19:58:37 UTC] PHP Parse error:  syntax error, unexpected '$telephone' (T_VARIABLE) in /home/redline123/public_html/scripts/action.php on line 42
+[22-Nov-2018 20:00:07 UTC] PHP Parse error:  syntax error, unexpected '$telephone' (T_VARIABLE) in /home/redline123/public_html/scripts/action.php on line 42
+[22-Nov-2018 20:51:10 UTC] PHP Notice:  Undefined index: recaptcha_challenge_field in /home/redline123/public_html/scripts/action.php on line 6
+[22-Nov-2018 20:51:10 UTC] PHP Notice:  Undefined index: recaptcha_response_field in /home/redline123/public_html/scripts/action.php on line 7
+[22-Nov-2018 20:53:06 UTC] PHP Notice:  Undefined index: recaptcha_challenge_field in /home/redline123/public_html/scripts/action.php on line 6
+[22-Nov-2018 20:53:06 UTC] PHP Notice:  Undefined index: recaptcha_response_field in /home/redline123/public_html/scripts/action.php on line 7
+[22-Nov-2018 20:58:07 UTC] PHP Notice:  Undefined index: recaptcha_challenge_field in /home/redline123/public_html/scripts/action.php on line 6
+[22-Nov-2018 20:58:07 UTC] PHP Notice:  Undefined index: recaptcha_response_field in /home/redline123/public_html/scripts/action.php on line 7

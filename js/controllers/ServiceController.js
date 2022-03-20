@@ -29,14 +29,14 @@ app.controller("ServiceController", ["$scope", "information", "$window", "$compi
     $scope.$watch("selector", function(newVal, oldVal, scope) {});
     $scope.$watch("selectedServices", function(newVal, oldVal, scope) {
         if(newVal == oldVal) {
-            console.log("same");
+            // console.log("same");
         } else {
-            console.log("changed");
+            // console.log("changed");
         }
     });
     
     $scope.click = function(title) {
-        console.log("assign click");
+        // console.log("assign click");
         $scope.selector = title;
         $scope.selectedCat = title;
         $scope.selectedServices = title.services;    

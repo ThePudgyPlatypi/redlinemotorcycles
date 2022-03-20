@@ -2,8 +2,7 @@ app.directive("media", function() {
     return {
         restrict: "E",
         scope: {
-            info: "=",
-            color: "="
+            info: "="
         },
         templateUrl: "views/partials/_media.html"
     };

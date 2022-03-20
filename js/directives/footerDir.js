@@ -4,11 +4,12 @@ app.directive("footerView", ["$window", "$q", function($window, $q) {
         scope: {
             info: "=",
             links: "=",
-            address: "="
+            address: "=",
+            hours: "="
         },
         link: function (scope, element, attrs) { 
             function load_script() {
-                var s = document.createElement('script'); // use global document since Angular's $document is weak
+                var s = document.createElement('script'); // use global document since Angulars document is weak
                 s.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAbia3vA2GFk8iiJz8XQZtNcsRaUX8W_I8&callback=initMap";
                 document.body.appendChild(s);
             }

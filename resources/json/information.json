@@ -1,4 +1,5 @@
 {
+    "circle" : "&#9900;",
     "address" : {
         "logo" : "images/Logo-official-small.png",
         "address" : "1628 Route 206",
@@ -7,6 +8,37 @@
         "zipcode" : "08088",
         "phone" : "(609)207-9572"
     },
+    "hoursLong" : [
+	{
+    	   "day" : "Monday",
+    	   "hours" : "9-5:30pm"
+    	},
+    	{
+    	   "day" : "Tuesday",
+    	   "hours" : "9-5:30pm"
+    	},
+    	{
+    	   "day" : "Wednesday",
+    	   "hours" : "9-5:30pm"
+    	},
+    	{
+    	   "day" : "Thursday",
+    	   "hours" : "9-5:30pm"
+    	},
+    	{
+    	   "day" : "Friday",
+    	   "hours" : "9-5:30pm"
+    	},
+    	{
+    	   "day" : "Saturday",
+    	   "hours" : "Appt. Only"
+    	},
+    	{
+    	   "day" : "Sunday",
+    	   "hours" : "Closed"
+    	}	
+    ],
+    "hoursShort" : "M-F: 9am-5:30pm, Sat: Appt. Only, Sun: Closed",
     "logo" : "images/Logo-official-small.png",
     "logoLight" : "images/Redline_logo_light_small.png",
     "home" : {
@@ -18,7 +50,7 @@
             "webm" : "videos/compressedFinal720_webm.mkv"
         },
         "about" : "Here at Redline Motorcycles we excel at getting your Motorcycle, Dirt Bike, ATV, or UTV back up and running. With more than 35 years of combine service experience, Patrick and Daniel Doyle have all the knowledge and expertise to give you piece of mind. Quality work is what we strive for here at Redline Motorcycles so call us today at (609) 207-9572, or use the contact form below, to schedule service. If you receive our voicemail then please leave your name, contact phone number, an appropriate time to reach you, explain what vehicle you have, what the problem is, and we will return your call as soon as we can.",
-        "brand" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros.",
+        "brand" : "We work on just about every brand, and style of bike. From Cruisers to Crotch Rockets, Honda's to Harleys. Our specialization leans towards sports bikes from every brand, but we are equally comfortable working on metric and standard cruisers. Pat also specializes in Honda Goldwing’s of all years. For ATV's, we can wrench all of them from UTV's to sport quads, and every variation in between. WE DO NOT WORK ON OFF BRAND ATV's or TRIKE's.",
         "brandHeaderBG" : "images/Motorcycle-RideBlur.jpg",
         "bikes" : [
             {
@@ -52,6 +84,10 @@
             {
                 "name" : "UTV's",
                 "image" : "images/utv.png"
+            },
+            {
+                "name" : "Snowmobiles (seasonal)",
+                "image" : "images/snowmobile.png"
             }
         ],
         "brands" : [
@@ -100,7 +136,7 @@
                 "logo" : "images/suzuki-transparent.png"
             },
             {
-                "name" : "Tirumph",
+                "name" : "Triumph",
                 "logo" : "images/Triumph-Logo.png"
                 
             },
@@ -118,8 +154,15 @@
                 "image" : "images/OilSpecial.svg",
                 "imagePNG" : "images/OilSpecial.png",
                 "nameProduct" : "Oil Change Special",
-                "titlePrice" : "$119.99",
-                "bioDesc" : "The Oil Change Special is the final word in motorcycle oil changes. With this service we change the oil and filter, check and set the tire pressures in both tires, lube and adjust chain (if applicable), adjust drive belt (if applicable), change final drive oil (if applicable), clean and tighten battery terminals, check and adjust controls, check and top off all fluids, check all lights for proper operation, and finally inspect brakes and tires for excessive wear! *phew* That's a lot!"
+                "titlePrice" : "$119.99*",
+                "bioDesc" : "The Oil Change Special is the final word in motorcycle oil changes. With this service, we change the oil and filter, check and set the tire pressures in both tires, lube and adjust chain (if applicable), adjust drive belt (if applicable), change final drive oil (if applicable), clean and tighten battery terminals, check and adjust controls, check and top off all fluids, check all lights for proper operation, and finally inspect brakes and tires for excessive wear! *phew* That's a lot! *price can vary"
+            },
+            {
+                "image" : "images/service.svg",
+                "imagePNG" : "images/service.png",
+                "nameProduct" : "Service Diagnosis",
+                "titlePrice" : "$119.99*",
+                "bioDesc" : "If your bike, or quad, is making a weird noise, has some strange behavior, or just isn't running right then bring it to us so that we can figure out exactly what is wrong with your vehicle. If we can fix your bike in the time allotted time then all is well, but if it’s something more involved, or requires the ordering of replacement parts then we will talk with you, and discuss your options. *price can vary"
             },
             {
                 "image" : "images/WheelChange.svg",
@@ -129,16 +172,23 @@
                 "bioDesc" : "Tire change price varies depending on a few things 1) Do you already have a tire, or are we getting it for you? 2) Are you going to bring the whole bike in, or just bring us the wheel? 3) What kind of bike do you own? Sport bikes are typically the cheapest to change, and full dresser touring bikes the most expensive. Drop us a line, or contact us thru the contact form, and we can talk to you about the options and let you know how much it will be for your application."
             },
             {
+                "image" : "images/service.svg",
+                "imagePNG" : "images/service.png",
+                "nameProduct" : "Acc. Builds",
+                "titlePrice" : "Free",
+                "bioDesc" : "Got an idea of how you want your bike to look, but don't quite know which parts to buy, or what will work? Well, we can help make sure you get the right parts that will work with your ride, and at competitive prices. Whether your building for power, handling, or looks, we can help you out."
+            },
+            {
                 "image" : "images/brakes.svg",
                 "imagePNG" : "images/brakes.png",
                 "nameProduct" : "Brake Pads",
                 "titlePrice" : "$59.99 & up",
-                "bioDesc" : "Brakes are arguable the most important thing on your bike! You might have all the horsepower in the world, but if you can only enjoy it once before you meet the end of the road then there is little point. Keep your brakes in good working order with frequent pad changes and rotor inspections. Price can vary depending on your application, and what kind of pads you want so please contact us either by phone, or with the contact form to get a more accurate quote."
+                "bioDesc" : "Brakes are arguably the most important thing on your bike! You might have all the horsepower in the world, but if you can only enjoy it once before you meet the end of the road then there is little point. Keep your brakes in good working order with frequent pad changes and rotor inspections. Price can vary depending on your application, and what kind of pads you want so please contact us either by phone, or with the contact form to get a more accurate quote."
             },
             {
                 "image" : "images/helmet.svg",
                 "imagePNG" : "images/helmet.png",
-                "nameProduct" : "Saftey Check",
+                "nameProduct" : "Safety Check",
                 "titlePrice" : "$99.99",
                 "bioDesc" : "Safety is the most important thing when riding a motorcycle. The freedom and open road are wonderful, but being able to reach your destination in one piece is just as wonderful. If you have any doubts about whether your ride is in tip top condition then bring it up to us. We check all your fluids, and top them off if need be, we check all your lights, we check your chain/belt/final drive to make sure everything is in safe working order, we check all your controls, make sure the wheels, tires, and brakes are up to snuff, set your tire pressures, and give your bike a once over for any other audible or visual clues that might hint to larger problems."
             },
@@ -147,36 +197,59 @@
                 "imagePNG" : "images/service.png",
                 "nameProduct" : "Scheduled Service Intervals",
                 "titlePrice" : "Price Varies",
-                "bioDesc" : "We are able to take care of any of your scheduled service intervals for your bike or ATV. Whether its 5,000 miles or 50,000 miles, we have you covered. Price can vary depending on the service that is taking place so please contact us if you want something a bit more accurate."
+                "bioDesc" : "We can take care of any of your scheduled service intervals for your bike or ATV. Whether its 5,000 miles or 50,000 miles, we have you covered. Price can vary depending on the service that is taking place so please contact us if you want something a bit more accurate."
+            },
+            {
+                "image" : "images/helmet.svg",
+                "imagePNG" : "images/helmet.png",
+                "nameProduct" : "Crash Work",
+                "titlePrice" : "$89.99 pr/hr",
+                "bioDesc" : "Unfortunately, no matter how safe you ride, accidents do happen. We can help you get your bike back together, working closely with your insurance provider to make it a seamless experience for you to get your bike back in one piece." 
             }
         ],
         "selector" : "",
         "serviceCat" : [
             {
                 "name" : "seat",
-                "title" : "Seat, Saddlebags...",
+                "title" : "Body and Accessories",
                 "services" : [
                     {
-                        "name" : "seat change",
-                        "description" : "We are able to get you some super sweet seats and install them properly"
+                        "name" : "Body Panel Replacement",
+                        "description" : "Whether it's from crash damage, or just replacing your fairing kit we can help you out. We do not paint panels here, but we work with local shops to get any service completed that you need."
                     },
                     {
-                        "name" : "Saddlebag install",
-                        "description" : "From hard mount bags to simple drape over bags we can install them all!"
+                        "name" : "Body Accessory Installs",
+                        "description" : "Got some saddlebags that you want put on? We have you covered. We can install most body accessories from lights to decals to aftermarket foot controls."
+                    },
+                    {
+                        "name" : "Light Kit Installs",
+                        "description" : "LED's make just about everything look cooler, but have you ever tried to install a kit on your bike? It's not that easy to get a nice clean look. We can professional install all lighting kits to give your ride that show bike appearance without you having to pull your hair out trying to install it yourself."
                     }
                 ]
             },
             {
                 "name" : "tank",
-                "title" : "Tank, Fuel system...",
+                "title" : "Fuel and Air",
                 "services" : [
                     {
-                        "name" : "De-Rust",
-                        "description" : ""
+                        "name" : "Air Filter Replacement",
+                        "description" : "Let your bike breath! Replace that old dirty filter with a sparkly brand new one."
                     },
                     {
-                        "name" : "Replace Petcock",
-                        "description" : "Here we will give you a pet cock since you obviously fucked up with the first one. Try to treat this one better. They will give you eggs from your hens."
+                        "name" : "Fuel Tank De-Rusting",
+                        "description" : "Bike been sitting outside for a while? Did you remember to drain the fuel? If your tank has gotten to the point where it looks like Fraggles might be taking up residence soon then bring it up to us so we can get it cleaned up for you."
+                    },
+                    {
+                        "name" : "Carburetor Clean and Synchronization",
+                        "description" : "If your bike or ATV is sputtering, shutting off, or sounds like it's choking in its own fluids then it’s possible you need to get your Carburetors fixed up. Prices vary depending on the bike."
+                    },
+                    {
+                        "name" : "Jetting",
+                        "description" : "Sometimes you need just a bit of extra sauce on your potato. Proper jetting can make a significant difference in the ride of your vehicle. Sometimes you jet for performance, and sometimes to get a bike back to proper operation. Get your bike breathing, and drinking correctly."
+                    },
+                    {
+                        "name" : "Fuel Injector Replacement",
+                        "description" : ""
                     }
                 ]
             },
@@ -185,18 +258,42 @@
                 "title" : "Controls, Handlebars, Grips...",
                 "services" : [
                     {
-                        "name" : "Clutch Adjustment",
-                        "description" : ""
+                        "name" : "Controls Adjustment",
+                        "description" : "Set your controls just the way you need them."
+                    },
+                    {
+                        "name" : "Handlebar Adjustment/Replacement",
+                        "description" : "Adjust or replace your current handlebars. Even the tricky ones what have the cabling routed thru them! We do it all."
+                    },
+                    {
+                        "name" : "Install Grips/Accessories",
+                        "description" : "If you’re tired of your lame plain black grips, then get some flame chrome grips to match your bodacious attitude! If you just want some accessories to compliment your existing setup then we got you covered too."
+                    },
+                    {
+                        "name" : "Headlight Install/Change",
+                        "description" : "We can certainly do simple bulb swaps on your vehicle, but we also can put in LED or HID kits."
+                    },
+                    {
+                        "name" : "Blinker Deletes",
+                        "description" : "Get that nice flush look that makes your bike look slick. We can take care of the front and the rear if you have the proper hardware."
                     }
                 ]
             },
             {
                 "name" : "exhaust",
-                "title" : "Exhaust, Footpegs...",
+                "title" : "Exhaust, Foot pegs...",
                 "services" : [
                     {
                         "name" : "Aftermarket Exhaust Install",
-                        "description" : ""
+                        "description" : "'Loud Pipes Save Lives' so the saying goes. Get that amazing sound from your bike whether it's 'PO-ta-TO-e PO-ta-TO-e PO-ta-TO-e' or 'WHEEEEEE-NHEEEEEEEE' we can install it. Also, if you have a longer muffler, and just want a bit more noise then talk to us and we might be able to help you out."
+                    },
+                    {
+                        "name" : "Foot Control Adjustment",
+                        "description" : "Get your shifter and brake pedal setup just right so that you're safe and comfortable."
+                    },
+                    {
+                        "name" : "Foot Control Accessories",
+                        "description" : "Whether it's highway pegs, floorboards, or stock reinstalls we are there for you. We will get them on for you, then get them adjusted to the correct placement for you. "
                     }
                 ]
             },
@@ -205,9 +302,26 @@
                 "title" : "Rebuilds, Carburetor, Injectors...",
                 "services" : [
                     {
-                        "name" : "Carb Clean",
+                        "name" : "Engine Rebuild",
+                        "description" : "We can handle all sorts of rebuilds from when your engine just finally gave up the ghost, to when you are looking to build up your motor for some more power. Dan and Pat have been taking apart and rebuilding motorcycle engines for more than 35 years between them. You can be sure that the engine is in good hands here."
+                    },
+                    {
+                        "name" : "Clutch Replacement",
+                        "description" : "If your clutch is broken, worn out, or you just want a different one then we can handle it for you."
+                    },
+                    {
+                        "name" : "Electrical Issues",
+                        "description" : "Possibly the most frustrating of all issues, electrical issues can baffle one with their seemingly unrelated behaviors in comparison to where the problem lays. We are able to diagnose and fix any issue you can come across regarding electrical."
+                    },
+                    {
+                        "name" : "Valve Adjustment/Replacement",
                         "description" : ""
+                    },
+                    {
+                        "name" : "Engine Component Upgrades",
+                        "description" : "Whether you’re looking for a new cylinder head, over-bored piston and cylinder, power commander install, or cam swap we can facilitate those needs."
                     }
+
                 ]
             },
             {
@@ -216,7 +330,27 @@
                 "services" : [
                     {
                         "name" : "Fork Seals",
+                        "description" : "Replace your blown and leaking fork seals! One of the most common points of wear on a motorcycles suspension."
+                    },
+                    {
+                        "name" : "Front Suspension Adjustments",
+                        "description" : "Get that perfect setup tailored to your riding style and proportions."
+                    },
+                    {
+                        "name" : "Front Brakes",
+                        "description" : "Either front brake pad replacement, or rotor(s). We have a large selection of brake pads in stock."
+                    },
+                    {
+                        "name" : "Front Master Cylinder Repair/Replacement",
                         "description" : ""
+                    },
+                    {
+                        "name" : "Wheel Bearing Replacement",
+                        "description" : ""
+                    },
+                    {
+                        "name" : "Steering Stem Bearing Replacement",
+                        "description" : "Bike been feeling 'sticky'? Like it doesn't want to turn? Could be a steering stem bearing. We have you covered."
                     }
                 ]
             },
@@ -226,6 +360,22 @@
                 "services" : [
                     {
                         "name" : "Chain Adjustment",
+                        "description" : "We can get your chain at the right tension."
+                    },
+                    {
+                        "name" : "Rear Brakes",
+                        "description" : "Either rear brake pad replacement, or rotor(s). We have a large selection of brake pads in stock."
+                    },
+                    {
+                        "name" : "Rear Suspension Adjustments",
+                        "description" : "Get that perfect setup tailored to your riding style and proportions."
+                    },
+                    {
+                        "name" : "Wheel Bearing Replacement",
+                        "description" : ""
+                    },
+                    {
+                        "name" : "Rear Master Cylinder Repair/Replacement",
                         "description" : ""
                     }
                 ]
@@ -251,18 +401,7 @@
             }
         },
         "cards" : [
-            {
-                "image" : "images/testEmployee.jpg",
-                "nameProduct" : "Chris Stehm",
-                "titlePrice" : "Sales Manager/Everything Else",
-                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
-            },
-            {
-                "image" : "images/john.jpg",
-                "nameProduct" : "John",
-                "titlePrice" : "Mechanic",
-                "bioDesc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet urna id imperdiet scelerisque. Aenean eleifend ligula at eleifend pellentesque. Duis gravida id lorem at commodo. Quisque pulvinar vulputate sapien, eu suscipit leo cursus vitae. Quisque volutpat varius ex, eu feugiat velit finibus ut. Fusce eu malesuada ligula. Morbi feugiat consectetur nisi. Aliquam vitae velit magna. Vivamus vulputate sollicitudin quam vel ultrices. Nulla accumsan dolor vulputate purus iaculis congue. Sed et tempus justo, in egestas eros."
-            }
+     
         ]
     },
     "media" : {

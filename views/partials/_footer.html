@@ -4,14 +4,23 @@
     </div>
     
     <div class="column large-6 small-12">
-        <div class="address">
-            <p>{{address.address}}</p>
-            <p>{{address.city}}, {{address.state}} {{address.zipcode}}</p>
-            <p>
+        <div class="address" itemscope itemtype='http://schema.org/LocalBusiness'>
+            <div itemprop="address">
+                <p>{{address.address}}</p>
+                <p>{{address.city}}, {{address.state}} {{address.zipcode}}</p>
+            </div>
+            <p itemprop="telephone">
                 <a href="#">
                     {{address.phone}}
                 </a>
             </p>
+            <ul class="socialMedia">
+                <li ng-repeat="hour in hours.hours">
+                    <span>{{hour.day}}</span>
+                    {{hours.circle}}
+                    <span>{{hour.hours}}</span>
+                </li>
+            </ul>
         </div>
         <div>
             <ul class="socialMedia">

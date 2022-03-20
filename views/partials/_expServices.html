@@ -1,7 +1,7 @@
 <div class="row expanded textRow redBG" id="towRow">
     <div class="column large-12 small-12 text-center">
         <h2>Need a Tow?</h2>
-        <p class="textBlock">We highly recommend using <a href="http://www.spincycletowing.net/index.html">Spin Cycle Towing</a> since they know how to tow a Motorcycle properly. Their number is (609) 477-1179, or, if your on your phone, just click the get a tow button to dial their number.</p>
+        <p class="textBlock">We highly recommend using <a href="http://www.spincycletowing.net/index.html">Spin Cycle Towing</a> since they know how to tow a Motorcycle properly. Their number is (609) 477-1179, or, if you're on your phone, just click the get a tow button to dial their number.</p>
         <a href="tel:6094771179" class="btn-dark">Get a Tow</a>
     </div>
 </div>
@@ -9,11 +9,22 @@
 <div class="row expanded darkBG textRow" id="lyftRow">
     <div class="column large-12 small-12 text-center">
         <h2>Need a Lyft?</h2>
-        <p class="textBlock">Can't find a ride? Just call a Lyft! Click on one of the buttons below to get taken To or From Redline Motorcycles.</p>
-        <div class="centerDiv">
-            <a target="lyft" href="https://lyft.com/ride?id=lyft&pickup[latitude]=37.764728&pickup[longitude]=-122.422999&partner=V0YtJRO0FhCz&destination[latitude]=39.867071&destination[longitude]=-74.732865" class="btn" ng-click="info()">Get a Lyft To</a>
-            <a target="lyft" href="https://lyft.com/ride?id=lyft&pickup[latitude]=39.8670718&pickup[longitude]=-74.732865&partner=V0YtJRO0FhCz" class="btn" ng-click="info()">Get a Lyft From</a>
+        <p class="textBlock">Can't find a ride? Just call a Lyft! Click on one of the buttons below to get taken to or from Redline Motorcycles.</p>
+<!--
+        <div ng-if="responsive > 560">
+            <div class="centerDiv">
+                <a target="lyft" href="https://lyft.com/ride?id=lyft&pickup[latitude]=37.764728&pickup[longitude]=-122.422999&partner=V0YtJRO0FhCz&destination[latitude]=39.867071&destination[longitude]=-74.732865" class="btn" ng-click="info()">Get a Lyft To</a>
+                <a target="lyft" href="https://lyft.com/ride?id=lyft&pickup[latitude]=39.8670718&pickup[longitude]=-74.732865&partner=V0YtJRO0FhCz" class="btn" ng-click="info()">Get a Lyft From</a>
+            </div>
+            <iframe name="lyft" id="lyft_frame" class="darkBG"></iframe>
         </div>
-        <iframe name="lyft" id="lyft_frame" class="darkBG"></iframe>
+-->
+        
+        <div>
+            <div class="centerDiv">
+                <a target="_blank" href="https://lyft.com/ride?id=lyft&pickup[latitude]=37.764728&pickup[longitude]=-122.422999&partner=V0YtJRO0FhCz&destination[latitude]=39.867071&destination[longitude]=-74.732865" class="btn" ng-click="info()">Get a Lyft To</a>
+                <a target="_blank" href="https://lyft.com/ride?id=lyft&pickup[latitude]=39.8670718&pickup[longitude]=-74.732865&partner=V0YtJRO0FhCz" class="btn" ng-click="info()">Get a Lyft From</a>
+            </div>
+        </div>
     </div>
 </div>
