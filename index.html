@@ -58,64 +58,6 @@
                         </h3>
                         <p>Give us a call! It is our preferred method of contact.</p>
                     </div>
-                    <div class="column small-12">
-
-                        <form ng-controller="FormController" name="contactForm" method="post" ng-submit="contactForm.$valid && handleFormSubmit(contact)" novalidate>
-                            
-                            <div class="row gutter-small">
-                                <div class="column small-6">
-                                    <label for="firstName">First Name<span class="required"> *</span></label>
-                                    <input ng-model="contact.firstName" type="text" class="form-input" id="firstName" name="firstName" placeholder="First Name" required>
-                                </div>
-                                <div class="column small-6">
-                                    <label for="lastName">Last Name<span class="required"> *</span></label>
-                                        <input ng-model="contact.lastName" type="text" class="form-input" id="lastName" name="lastName" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                            
-                            <div class="row gutter-small">
-                                <div class="column small-6">
-                                    <label for="email">Email Address<span class="required"> *</span></label>
-                                        <input ng-model="contact.email" type="text" class="form-input" id="email" name="email" placeholder="Email@Address.com" required>
-                                </div>
-                                <div class="column small-6">   
-                                    <label for="phone">Phone Number<span class="required"> *</span></label>
-                                        <input ng-model="contact.phone" type="text" class="form-input" id="phone" name="phone" placeholder="(###) ###-####" required>
-                                </div>
-                            </div>
-
-                            <div class="row gutter-small">
-                                <div class="column small-4">
-                                    <label for="bikeYear">Bike Year<span class="required"> *</span></label>
-                                        <input ng-model="contact.year" type="text" class="form-input" id="bikeYear" name="bikeYear" placeholder="Year of Bike" required>
-                                </div>
-                                <div class="column small-4">
-                                    <label for="bikeMake">Bike Make<span class="required"> *</span></label>
-                                        <input ng-model="contact.make" type="text" class="form-input" id="bikeMake" name="bikeMake" placeholder="Make of Bike" required>
-                                </div>
-                                <div class="column small-4">
-                                    <label for="bikeModel">Bike Model<span class="required"> *</span></label>
-                                        <input ng-model="contact.model" type="text" class="form-input" id="bikeModel" name="bikeModel" placeholder="Model of Bike" required>
-                                </div>
-                            </div>
-                            <div class="row column small-12 ">
-                                <label for="message">Message<span class="required"> *</span></label>
-                                    <textarea ng-model="contact.message" type="text" class="form-textarea" id="message" name="message" placeholder="What can we help you with?" cols="30" rows="5" required></textarea>
-                                    
-                                <span class="valid" ng-if="contactForm.$invalid">{{ formMessage.invalid }}</span>
-                                <span class="valid" ng-if="contactForm.$valid">{{ formMessage.valid }}</span>
-                                <span class="valid" ng-if="contactForm.$submitted">{{ formMessage.submitted }}</span>
-                                
-                                <div class="reCaptcha-container">
-                                    <div ng-model="contact.recaptcha" class="g-recaptcha" data-sitekey="6LccjnwUAAAAALjf04XulXl-nDwW_Ob0p-KTIRB0"></div>
-                                </div>
-
-                                <button class="btn" ng-disabled="contactForm.$invalid" type="submit" value="Submit">Submit</button>
-                            </div>
-
-                        </form>
-
-                    </div>
                 </div>  
             </div>
 <!--media-->
